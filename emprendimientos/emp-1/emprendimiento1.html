@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Incubadora - Emprendimiento: Nywa</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="min-h-screen flex flex-col bg-[#0b0616] text-white font-sans">
+
+  <!-- FONDO NEÓN -->
+  <div aria-hidden="true" class="pointer-events-none fixed inset-0 -z-10">
+    <div class="absolute -top-24 -left-24 h-96 w-96 rounded-full bg-fuchsia-600/25 blur-3xl"></div>
+    <div class="absolute -bottom-24 -right-24 h-[32rem] w-[32rem] rounded-full bg-indigo-600/25 blur-3xl"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(1200px_500px_at_80%_10%,rgba(255,255,255,0.08),transparent)]"></div>
+    <div class="absolute inset-0 opacity-[0.045] bg-[linear-gradient(0deg,transparent_24px,rgba(255,255,255,0.06)_25px),linear-gradient(90deg,transparent_24px,rgba(255,255,255,0.06)_25px)] bg-[size:25px_25px]"></div>
+  </div>
+
+  <!-- NAVBAR (rutas ajustadas con ../) -->
+  <header class="sticky top-0 z-20 border-b border-white/10 bg-[#473273]">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3">
+      <a href="../../index.html" class="inline-flex items-center gap-3">
+        <img src="../../img/logo.png" alt="Logo" class="h-10">
+        <span class="sr-only">Inicio</span>
+      </a>
+      <nav class="hidden md:flex items-center gap-8 font-semibold">
+        <a href="../../index.html" class="hover:text-[#99e3f0]">Inicio</a>
+        <a href="../../programas.html" class="hover:text-[#99e3f0]">Programas</a>
+        <a href="../../eventos.html" class="hover:text-[#99e3f0]">Eventos</a>
+        <a href="../../emprendimientos.html" class="hover:text-[#99e3f0]">emprendimientos</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO / TÍTULO -->
+  <section class="mx-auto max-w-7xl px-6 pt-10">
+    <div class="grid gap-8 md:grid-cols-2">
+      <div class="space-y-5">
+        <div class="flex flex-wrap items-center gap-3">
+          <!-- etiquetas del emprendimiento => linea, año , ... -->
+          <span class="inline-flex items-center gap-2 rounded-full bg-fuchsia-600 px-3 py-1 text-sm font-semibold">
+            Digital
+          </span>
+         
+          
+        </div>
+        <!-- titulo del emprendimiento-->
+
+        <h1 class="text-4xl font-bold leading-tight md:text-5xl">NYWA</h1>
+
+        <p class="text-white/80">
+          Plataforma e-commerce especializada en la venta de hilos artesanales de alpaca bajo un modelo de comercio justo
+        </p>
+
+        <div class="flex flex-wrap gap-3">
+          
+          <a href="#contacto" class="rounded-full bg-fuchsia-600/90 px-5 py-2 text-sm font-semibold hover:bg-fuchsia-600">
+            Contactar
+          </a>
+        </div>
+      </div>
+
+      <div class="relative overflow-hidden rounded-2xl ring-1 ring-white/10">
+        <img src="nywa.png" alt="Imagen del emprendimiento" class="h-96 w-full object-cover aspect-square ">
+        <!-- etiqueta flotante -->
+        <span class="absolute right-4 top-4 rounded-full bg-black/40 px-3 py-1 text-xs ring-1 ring-white/10 backdrop-blur">
+          NYWA
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <!-- DETALLES -->
+  <section id="detalles" class="mx-auto max-w-7xl px-6 py-12">
+    <div class="grid gap-8 md:grid-cols-2 px-12 space-x-12">
+  
+      <article class="rounded-2xl border border-white/10 bg-white/5 p-6">
+        <h3 class="text-lg font-semibold">Problema</h3>
+        <ul class="mt-3 space-y-2 text-white/80 list-disc list-inside">
+          <li>Artesanos dependen de intermediarios que pagan precios bajos e inestables.</li>
+          <li>Falta de visibilidad y acceso a clientes que buscan insumos sostenibles y auténticos.</li>
+          <li>Desigualdad en la cadena de valor: el margen no llega al productor.</li>
+          <li>Riesgo de pérdida de técnicas y saberes textiles tradicionales.</li>
+        </ul>
+      </article>
+  
+      <article class="rounded-2xl border border-white/10 bg-white/5 p-6">
+        <h3 class="text-lg font-semibold">Solución</h3>
+        <ul class="mt-3 space-y-2 text-white/80 list-disc list-inside">
+          <li>Plataforma e-commerce que conecta directamente a artesanos con compradores.</li>
+          <li>Modelo de comercio justo con precios transparentes y pagos dignos.</li>
+          <li>Ficha de producto con origen, trazabilidad e impacto social.</li>
+          <li>Logística y curaduría de calidad (hilo 100% alpaca, procesos artesanales).</li>
+        </ul>
+      </article>
+  
+      <!--
+      <article class="rounded-2xl border border-white/10 bg-white/5 p-6 md:col-span-2">
+        <h3 class="text-lg font-semibold">Modelo</h3>
+        <p class="mt-2 text-white/80">
+          Marketplace con comisión justa + suscripción para talleres (herramientas de catálogo, gestión de stock y
+          analítica de ventas) + programas de certificación de comercio justo.
+        </p>
+      </article>
+      -->
+  
+    </div>
+  </section>
+  
+
+  <!-- EQUIPO (fotos estilo speakers con borde púrpura al hover) -->
+  <section id="equipo" class="mx-auto max-w-7xl px-6 py-12">
+    <div class="mb-10 text-center">
+      <h2 class="text-3xl font-bold">Nuestro Equipo</h2>
+      <p class="text-sm text-white/70">Fundadores & Colaboradores</p>
+    </div>
+  
+    <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+      
+      <!-- Tarjeta -->
+      <article class="rounded-lg bg-white/5 p-6 text-center shadow-md transition hover:bg-white/10">
+        <h3 class="text-lg font-semibold">Jesus Leopoldo Davalos Quispe</h3>
+        <p class="mt-2 text-sm text-white/60">Co-Fundador</p>
+      </article>
+  
+      <!-- Tarjeta -->
+      <article class="rounded-lg bg-white/5 p-6 text-center shadow-md transition hover:bg-white/10">
+        <h3 class="text-lg font-semibold">Maria Carla Davalos Quispe</h3>
+        <p class="mt-2 text-sm text-white/60">Co-Fundadora</p>
+      </article>
+  
+      <!-- Tarjeta -->
+      <article class="rounded-lg bg-white/5 p-6 text-center shadow-md transition hover:bg-white/10">
+        <h3 class="text-lg font-semibold">Roberto Carlos Arnado Puma</h3>
+        <p class="mt-2 text-sm text-white/60">Co-Fundador</p>
+      </article>
+  
+    </div>
+  </section>
+  
+
+  <!-- LOGROS-->
+  <!-- <section id="logros" class="mx-auto max-w-7xl px-6 py-12">
+    <h2 class="mb-6 text-2xl font-bold">Logros</h2>
+
+    <div class="grid gap-6 lg:grid-cols-3">
+      <article class="rounded-2xl border border-white/10 bg-white/5 p-6">
+        <div class="mb-2 inline-flex items-center gap-2 rounded-full bg-green-500/20 px-3 py-1 text-xs font-semibold text-green-200">
+          2024 · Convocatoria
+        </div>
+        <h3 class="text-lg font-semibold">Ganador StartUp Perú</h3>
+        <p class="mt-2 text-white/80">Cofinanciamiento para escalamiento del módulo de predicción de demanda.</p>
+      </article>
+
+      <article class="rounded-2xl border border-white/10 bg-white/5 p-6">
+        <div class="mb-2 inline-flex items-center gap-2 rounded-full bg-sky-500/20 px-3 py-1 text-xs font-semibold text-sky-200">
+          2025 · Pilotos
+        </div>
+        <h3 class="text-lg font-semibold">3 pilotos con retailers</h3>
+        <p class="mt-2 text-white/80">Aumento de rotación +12% y reducción de quiebres de stock −18%.</p>
+      </article>
+
+      <article class="rounded-2xl border border-white/10 bg-white/5 p-6">
+        <div class="mb-2 inline-flex items-center gap-2 rounded-full bg-amber-500/20 px-3 py-1 text-xs font-semibold text-amber-200">
+          2025 · Reconocimiento
+        </div>
+        <h3 class="text-lg font-semibold">Top 10 Demo Day regional</h3>
+        <p class="mt-2 text-white/80">Seleccionado por jurado corporativo y fondos de VC.</p>
+      </article>
+    </div>
+  </section> -->
+
+  <!-- PRÓXIMOS PASOS -->
+  <!-- <section id="proximos-pasos" class="mx-auto max-w-7xl px-6 pb-16">
+    <h2 class="mb-6 text-2xl font-bold">Próximos pasos</h2>
+
+    <div class="grid gap-6 md:grid-cols-2">
+      <article class="rounded-2xl border border-white/10 bg-white/5 p-6">
+        <h3 class="text-lg font-semibold">Roadmap (Q4 2025)</h3>
+        <ul class="mt-3 space-y-2 text-white/80">
+          <li>✅ Conector Mercado Libre (beta)</li>
+          <li>✅ Forecast SKU diario multi-tienda</li>
+          <li>🟨 Recomendador de precios dinámicos</li>
+          <li>⬜ App móvil (v1) para inventario</li>
+        </ul>
+      </article>
+
+      <article class="rounded-2xl border border-white/10 bg-white/5 p-6">
+        <h3 class="text-lg font-semibold">Lo que buscamos</h3>
+        <ul class="mt-3 space-y-2 text-white/80">
+          <li>🤝 Aliados retail & e-commerce</li>
+          <li>💼 Clientes piloto en pymes</li>
+          <li>💸 Pre-semilla para GTM y equipo data</li>
+        </ul>
+      </article>
+    </div>
+  </section>  -->
+
+ 
+
+  <!-- FOOTER -->
+  <footer class="mt-auto border-t border-white/10 bg-[#0b0616] py-8 text-center text-white/70">
+    <p>© 2025 Incubadora de Empresas</p>
+  </footer>
+
+</body>
+</html>

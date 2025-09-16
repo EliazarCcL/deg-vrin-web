@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Incubadora – Programas</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="min-h-screen flex flex-col bg-slate-50 text-slate-800">
+
+  <!-- HEADER / NAV -->
+  <header class="sticky top-0 z-50 border-b border-white/10 bg-[#473273] text-white/90 backdrop-blur">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex h-16 items-center justify-between">
+        <a href="index.html" class="flex items-center gap-3">
+          <img src="img/logo.png" alt="Logo" class="h-10 w-auto">
+          <span class="hidden sm:block font-semibold tracking-wide">Incubadora</span>
+        </a>
+
+        <!-- Desktop nav -->
+        <nav class="hidden md:flex items-center gap-8 font-medium">
+          <a href="index.html" class="hover:text-[#99e3f0]">Inicio</a>
+          <a href="programas.html" class="text-white font-semibold underline underline-offset-4 decoration-[#b803d7]">Programas</a>
+          <a href="eventos.html" class="hover:text-[#99e3f0]">Eventos</a>
+          <a href="emprendimientos.html" class="hover:text-[#99e3f0]">Emprendimientos</a>
+        </nav>
+
+        
+
+        <!-- Mobile button -->
+        <button id="navBtn" class="md:hidden inline-flex h-10 w-10 items-center justify-center rounded-md hover:bg-white/10" aria-label="Abrir menú">
+          <i class="fa-solid fa-bars text-xl"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobileNav" class="hidden md:hidden border-t border-white/10 bg-[#473273]">
+      <nav class="mx-auto max-w-7xl px-4 py-4 flex flex-col gap-3">
+        <a href="index.html" class="py-2 hover:text-[#99e3f0]">Inicio</a>
+        <a href="programas.html" class="py-2 text-white font-semibold">Programas</a>
+        <a href="eventos.html" class="py-2 hover:text-[#99e3f0]">Eventos</a>
+        <a href="logros.html" class="py-2 hover:text-[#99e3f0]">Logros</a>
+       
+        </a>
+      </nav>
+    </div>
+  </header>
+
+<!-- SECCIÓN: Programas -->
+<section id="programas" class="relative bg-gradient-to-br from-slate-50 to-slate-100 py-20">
+  <div class="mx-auto max-w-7xl px-6 text-center">
+    <!-- Título principal -->
+    <h2 class="text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900">
+      Programas
+    </h2>
+    <!-- Línea decorativa -->
+    <div class="mx-auto mt-4 h-1 w-28 rounded bg-[#b803d7]"></div>
+
+    <!-- Subtítulo -->
+    <p class="mx-auto mt-6 max-w-3xl text-lg text-slate-600">
+      En <span class="font-semibold text-[#473273]">Paqarina Wasi</span> te ofrecemos 
+      rutas de acompañamiento diseñadas para cada etapa del emprendimiento: desde la 
+      <span class="font-semibold">sensibilización</span> y la <span class="font-semibold">ideación</span>, 
+      hasta la <span class="font-semibold">incubación</span>, <span class="font-semibold">aceleración</span> 
+      y más. Cada programa combina mentoría, formación y conexiones estratégicas.
+    </p>
+  </div>
+</section>
+
+
+  <!-- PROGRAMA: Incubación -->
+<section class="bg-purple-100">
+  <div class="mx-auto max-w-7xl px-6 py-16 grid items-center gap-10 md:grid-cols-2">
+
+    <!-- Imagen a la izquierda -->
+    <div class="md:order-1 reveal-left">
+      <div class="relative overflow-hidden rounded-xl shadow-lg ring-1 ring-slate-200">
+        <img src="img/programas/incubacion.png" alt="Incubación"
+             class="w-full aspect-square object-cover">
+        <span class="absolute left-4 top-4 rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-[#473273] ring-1 ring-black/5">
+          Programa intensivo
+        </span>
+      </div>
+    </div>
+
+    <!-- Contenido -->
+    <article class="md:order-2 reveal-right">
+      <h1 class="text-5xl md:text-6xl font-extrabold text-slate-900">Incubación</h1>
+      <p class="mt-3 text-slate-700">
+        Programa intensivo de desarrollo empresarial para consolidar startups con modelos de negocio validados y equipos formados.
+      </p>
+
+      <!-- Chips -->
+      <ul class="mt-5 flex flex-wrap gap-2">
+        <li class="rounded-full bg-[#473273]/10 px-3 py-1 text-sm font-medium text-[#473273]">Duración: 2 meses</li>
+        <li class="rounded-full bg-[#b803d7]/10 px-3 py-1 text-sm font-medium text-[#b803d7]">Enfoque: Escalamiento</li>
+        <li class="rounded-full bg-slate-200 px-3 py-1 text-sm font-medium text-slate-700">Startups con MVP validado</li>
+        <li class="rounded-full bg-slate-200 px-3 py-1 text-sm font-medium text-slate-700">Mentoría + inversión</li>
+      </ul>
+
+      <!-- Proceso -->
+      <div class="mt-6 grid gap-3 text-slate-700">
+        <p><span class="font-semibold text-slate-900">Proceso:</span></p>
+        <ul class="list-disc pl-5 space-y-1">
+          <li>Refinamiento del producto/servicio</li>
+          <li>Estrategia de go-to-market</li>
+          <li>Búsqueda de financiamiento</li>
+          <li>Preparación para Demo Day</li>
+        </ul>
+      </div>
+
+      <!-- En Paqarina Wasi -->
+      <div class="mt-6 rounded-xl bg-white p-5 ring-1 ring-slate-200">
+        <p class="text-sm font-semibold text-[#473273] uppercase tracking-wide">En Paqarina Wasi</p>
+        <ul class="mt-3 space-y-2 text-slate-700">
+          <li><i class="fa-solid fa-check mr-2 text-[#b803d7]"></i> Mentoría especializada por sectores</li>
+          <li><i class="fa-solid fa-check mr-2 text-[#b803d7]"></i> Acceso a financiamiento hasta <span class="font-semibold">PROINNOVATE S/.67,000</span></li>
+          <li><i class="fa-solid fa-check mr-2 text-[#b803d7]"></i> Red de contactos e inversionistas</li>
+          <li><i class="fa-solid fa-check mr-2 text-[#b803d7]"></i> Laboratorios especializados</li>
+        </ul>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- PROGRAMA: Preincubación -->
+<section class="bg-slate-100">
+  <div class="mx-auto max-w-7xl px-6 py-16 grid items-center gap-10 md:grid-cols-2">
+
+    <!-- Contenido -->
+    <article class="md:order-1 reveal-left">
+      <h1 class="text-5xl md:text-6xl font-extrabold text-slate-900">Preincubación</h1>
+      <p class="mt-3 text-slate-700">
+        Programa de acompañamiento inicial para validar y estructurar ideas de emprendimiento con potencial tecnológico.
+      </p>
+
+      <!-- Chips -->
+      <ul class="mt-5 flex flex-wrap gap-2">
+        <li class="rounded-full bg-[#473273]/10 px-3 py-1 text-sm font-medium text-[#473273]">Duración: 2 meses</li>
+        <li class="rounded-full bg-[#b803d7]/10 px-3 py-1 text-sm font-medium text-[#b803d7]">Enfoque: Validación</li>
+        <li class="rounded-full bg-slate-200 px-3 py-1 text-sm font-medium text-slate-700">Emprendedores en idea</li>
+        <li class="rounded-full bg-slate-200 px-3 py-1 text-sm font-medium text-slate-700">Talleres + mentoría + networking</li>
+      </ul>
+
+      <!-- Detalle -->
+      <div class="mt-6 grid gap-3 text-slate-700">
+        <ul class="list-disc pl-5 space-y-1">
+          <li>Validación de problema y solución</li>
+          <li>Desarrollo de modelo de negocio</li>
+          <li>Prototipado y testing inicial</li>
+          <li>Preparación para búsqueda de inversión</li>
+        </ul>
+      </div>
+
+      <!-- En Paqarina Wasi -->
+      <div class="mt-6 rounded-xl bg-white p-5 ring-1 ring-slate-200">
+        <p class="text-sm font-semibold text-[#473273] uppercase tracking-wide">En Paqarina Wasi</p>
+        <ul class="mt-3 space-y-2 text-slate-700">
+          <li><i class="fa-solid fa-check mr-2 text-[#b803d7]"></i> Puente entre idea y startup formal</li>
+          <li><i class="fa-solid fa-check mr-2 text-[#b803d7]"></i> Acceso a mentores especializados</li>
+          <li><i class="fa-solid fa-check mr-2 text-[#b803d7]"></i> Espacio de coworking gratuito</li>
+          <li><i class="fa-solid fa-check mr-2 text-[#b803d7]"></i> Preparación para programa de incubación</li>
+        </ul>
+      </div>
+    </article>
+
+    <!-- Imagen a la derecha -->
+    <div class="md:order-2 reveal-right">
+      <div class="relative overflow-hidden rounded-xl shadow-lg ring-1 ring-slate-200">
+        <img src="img/programas/pre-incubacion.png" alt="Preincubación"
+             class="w-full aspect-square object-cover">
+        <span class="absolute left-4 top-4 rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-[#473273] ring-1 ring-black/5">
+          Programa inicial
+        </span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+  <!-- PROGRAMA: Aceleración (Próximamente) -->
+<section class="bg-pink-100">
+  <div class="mx-auto max-w-7xl px-6 py-16 grid items-center gap-10 md:grid-cols-2">
+
+    <!-- Imagen a la izquierda -->
+    <div class="md:order-1 reveal-left">
+      <div class="relative overflow-hidden rounded-xl shadow-lg ring-1 ring-slate-200">
+        <img src="img/programas/acelerado.png" alt="Aceleración"
+             class="w-full aspect-square object-cover">
+        <span class="absolute left-4 top-4 rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-[#473273] ring-1 ring-black/5">
+          Próximamente
+        </span>
+      </div>
+    </div>
+
+    <!-- Contenido -->
+    <article class="md:order-2 reveal-right">
+      <h1 class="text-5xl md:text-6xl font-extrabold text-slate-900">Aceleración</h1>
+      <p class="mt-3 text-slate-700">
+        Programa intensivo de escalamiento para startups consolidadas que buscan crecimiento exponencial
+        y expansión de mercado.
+      </p>
+
+      <!-- Chips -->
+      <ul class="mt-5 flex flex-wrap gap-2">
+        <li class="rounded-full bg-[#473273]/10 px-3 py-1 text-sm font-medium text-[#473273]">Duración: 3–4 meses</li>
+        <li class="rounded-full bg-[#b803d7]/10 px-3 py-1 text-sm font-medium text-[#b803d7]">Enfoque: Escalamiento</li>
+        <li class="rounded-full bg-slate-200 px-3 py-1 text-sm font-medium text-slate-700">Startups con tracción</li>
+        <li class="rounded-full bg-slate-200 px-3 py-1 text-sm font-medium text-slate-700">Modalidad: Inversión + mentoría</li>
+      </ul>
+
+      <!-- Proceso -->
+      <div class="mt-6 grid gap-3 text-slate-700">
+        <p><span class="font-semibold text-slate-900">Proceso:</span></p>
+        <ul class="list-disc pl-5 space-y-1">
+          <li>Optimización de operaciones y producto</li>
+          <li>Estrategia de expansión de mercado</li>
+          <li>Preparación para rondas Serie A/B</li>
+          <li>Demo Day con inversionistas nacionales/internacionales</li>
+        </ul>
+      </div>
+
+      <!-- En Paqarina Wasi (Próximamente) -->
+      <div class="mt-6 rounded-xl bg-white p-5 ring-1 ring-slate-200">
+        <p class="text-sm font-semibold text-[#473273] uppercase tracking-wide">En Paqarina Wasi (Próximamente)</p>
+        <ul class="mt-3 space-y-2 text-slate-700">
+          <li><i class="fa-solid fa-check mr-2 text-[#b803d7]"></i> Inversión directa en la startup</li>
+          <li><i class="fa-solid fa-check mr-2 text-[#b803d7]"></i> Mentores C-level y ejecutivos senior</li>
+          <li><i class="fa-solid fa-check mr-2 text-[#b803d7]"></i> Red de inversionistas nacionales e internacionales</li>
+          <li><i class="fa-solid fa-check mr-2 text-[#b803d7]"></i> Acceso a mercados regionales y globales</li>
+        </ul>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- PROGRAMA: Hackathon -->
+<section class="bg-slate-100">
+  <div class="mx-auto max-w-7xl px-6 py-16 grid items-center gap-10 md:grid-cols-2">
+
+    <!-- Contenido -->
+    <article class="md:order-1 reveal-left">
+      <h1 class="text-5xl md:text-6xl font-extrabold text-slate-900">Hackathon</h1>
+      <p class="mt-3 text-slate-700">
+        Evento de desarrollo intensivo donde equipos multidisciplinarios proponen y construyen soluciones tecnológicas funcionales en <span class="font-semibold text-slate-900">2-3 días</span>.
+      </p>
+
+      <!-- Chips -->
+      <ul class="mt-5 flex flex-wrap gap-2">
+        <li class="rounded-full bg-[#473273]/10 px-3 py-1 text-sm font-medium text-[#473273]">Duración: 48–72 h</li>
+        <li class="rounded-full bg-[#b803d7]/10 px-3 py-1 text-sm font-medium text-[#b803d7]">Enfoque: Prototipos</li>
+        <li class="rounded-full bg-slate-200 px-3 py-1 text-sm font-medium text-slate-700">Conocimientos técnicos requeridos</li>
+      </ul>
+
+      <!-- Detalle -->
+      <div class="mt-5 grid gap-3 text-slate-700">
+        <p><span class="font-semibold text-slate-900">Participantes:</span> Programadores, administradores, emprendedores y más.</p>
+        <p><span class="font-semibold text-slate-900">Metodología:</span> Desarrollo intensivo de código, creación de MVP y demo en vivo.</p>
+        <p>Formación de equipos multidisciplinarios con enfoque en resultados funcionales.</p>
+      </div>
+
+      <!-- En Paqarina Wasi -->
+      <div class="mt-6 rounded-xl bg-white p-5 ring-1 ring-slate-200">
+        <p class="text-sm font-semibold text-[#473273] uppercase tracking-wide">En Paqarina Wasi</p>
+        <ul class="mt-3 space-y-2 text-slate-700">
+          <li><i class="fa-solid fa-check mr-2 text-[#b803d7]"></i> Validación técnica de ideas</li>
+          <li><i class="fa-solid fa-check mr-2 text-[#b803d7]"></i> Creación de equipos fundadores</li>
+          <li><i class="fa-solid fa-check mr-2 text-[#b803d7]"></i> Prototipos listos para pre-incubación</li>
+          <li><i class="fa-solid fa-check mr-2 text-[#b803d7]"></i> Conexión directa con inversionistas</li>
+        </ul>
+      </div>
+    </article>
+
+    <!-- Imagen -->
+    <div class="md:order-2 reveal-right">
+      <div class="relative overflow-hidden rounded-xl shadow-lg ring-1 ring-slate-200">
+        <img src="img/programas/hackathon.png" alt="Hackathon"
+             class="w-full aspect-square object-cover">
+        <span class="absolute left-4 top-4 rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-[#473273] ring-1 ring-black/5">
+          Evento intensivo
+        </span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+  
+ <!-- PROGRAMA: Sensibilización -->
+<section class="bg-white">
+  <div class="mx-auto max-w-7xl px-6 py-14 grid items-center gap-10 md:grid-cols-2">
+
+    <!-- Imagen / banner del programa -->
+    <div class="order-1 reveal-left">
+      <h1 class="text-6xl font-extrabold text-slate-900">Sensibilización</h1>
+      <br>  
+      <div class="relative overflow-hidden rounded-2xl shadow-lg ring-1 ring-slate-200">
+        <img src="img/programas/sensibilizacion.png" alt="Sensibilización"
+             class="w-full aspect-square object-cover">
+        <span class="absolute left-4 top-4 rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-[#473273] ring-1 ring-black/5">
+          Programa corto
+        </span>
+      </div>
+    </div>
+
+    <!-- Contenido -->
+    <article class="order-2 reveal-right">
+      <p class="mt-2 text-[#473273] font-semibold">¿Qué es una sensibilización?</p>
+      <p class="mt-3 text-slate-700">
+        Evento introductorio donde se busca despertar el interés y la conciencia de los participantes sobre
+        innovación, emprendimiento o un tema específico en pocas horas.
+      </p>
+
+      <!-- Chips de características -->
+      <ul class="mt-5 flex flex-wrap gap-2">
+        <li class="rounded-full bg-[#473273]/10 px-3 py-1 text-sm font-medium text-[#473273]">Duración: 2–4 h</li>
+        <li class="rounded-full bg-[#b803d7]/10 px-3 py-1 text-sm font-medium text-[#b803d7]">Enfoque: Inspiración</li>
+        <li class="rounded-full bg-slate-100 px-3 py-1 text-sm font-medium text-slate-700">Abierta a todo público</li>
+      </ul>
+
+      <!-- Detalle de metodología y alcance -->
+      <div class="mt-5 grid gap-3">
+        <p class="text-slate-700">
+          <span class="font-semibold text-slate-900">Participantes:</span>
+          Estudiantes, docentes, profesionales y público en general.
+        </p>
+        <p class="text-slate-700">
+          <span class="font-semibold text-slate-900">Metodología:</span>
+          Charlas interactivas, dinámicas grupales y casos de éxito.
+        </p>
+        <p class="text-slate-700">No requiere experiencia previa en emprendimiento o innovación.</p>
+        <p class="text-slate-700">Incluye espacio de networking y descubrimiento de oportunidades.</p>
+      </div>
+
+      <!-- En Paqarina Wasi -->
+      <div class="mt-6 rounded-xl bg-slate-50 p-5 ring-1 ring-slate-200">
+        <p class="text-sm font-semibold text-[#473273] uppercase tracking-wide">En Paqarina Wasi</p>
+        <ul class="mt-3 space-y-2 text-slate-700">
+          <li><i class="fa-solid fa-check mr-2 text-[#b803d7]"></i> Primer acercamiento al ecosistema emprendedor</li>
+          <li><i class="fa-solid fa-check mr-2 text-[#b803d7]"></i> Generación de interés y curiosidad</li>
+          <li><i class="fa-solid fa-check mr-2 text-[#b803d7]"></i> Identificación de talentos para programas posteriores</li>
+          <li><i class="fa-solid fa-check mr-2 text-[#b803d7]"></i> Cultura de innovación y mentalidad emprendedora</li>
+        </ul>
+      </div>
+    </article>
+  </div>
+</section>
+
+
+<!-- PROGRAMA: Ideathon -->
+<section class="bg-pink-100">
+  <div class="mx-auto max-w-7xl px-6 py-16 grid items-center gap-10 md:grid-cols-2">
+
+    <!-- Imagen / banner -->
+    <div class="md:order-2 reveal-right">
+      
+      <div class="mt-4 relative overflow-hidden rounded-xl shadow-lg ring-1 ring-slate-200">
+        <img src="img/programas/ideathon.png" alt="Ideathon"
+             class="w-full aspect-square object-cover"> <!-- imagen cuadrada -->
+        <span class="absolute left-4 top-4 rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-[#473273] ring-1 ring-black/5">
+          Evento de un día
+        </span>
+      </div>
+    </div>
+
+    <!-- Contenido -->
+    <article class="md:order-1 reveal-left">
+      <h1 class="text-5xl md:text-6xl font-extrabold text-slate-900">Ideathon</h1>
+      <br>
+      <p class="text-[#473273] font-semibold">¿Qué es una Ideathon?</p>
+      <p class="mt-2 text-slate-700">
+        Evento de innovación donde equipos multidisciplinarios generan ideas creativas
+        para resolver problemas específicos en un solo día.
+      </p>
+
+      <!-- Chips -->
+      <ul class="mt-5 flex flex-wrap gap-2">
+        <li class="rounded-full bg-[#473273]/10 px-3 py-1 text-sm font-medium text-[#473273]">Duración: 1 día</li>
+        <li class="rounded-full bg-[#b803d7]/10 px-3 py-1 text-sm font-medium text-[#b803d7]">Enfoque: Ideas creativas</li>
+        <li class="rounded-full bg-slate-200 px-3 py-1 text-sm font-medium text-slate-700">Abierta a todas las áreas</li>
+      </ul>
+
+      <!-- Detalle -->
+      <div class="mt-5 grid gap-3 text-slate-700">
+        <p><span class="font-semibold text-slate-900">Participantes:</span> Estudiantes y profesionales de todas las áreas.</p>
+        <p><span class="font-semibold text-slate-900">Metodología:</span> Brainstorming, validación y presentación (pitch).</p>
+        <p>No se requieren conocimientos técnicos de programación.</p>
+      </div>
+
+      <!-- En Paqarina Wasi -->
+      <div class="mt-6 rounded-xl bg-white p-5 ring-1 ring-slate-200">
+        <p class="text-sm font-semibold text-[#473273] uppercase tracking-wide">En Paqarina Wasi</p>
+        <ul class="mt-3 space-y-2 text-slate-700">
+          <li><i class="fa-solid fa-check mr-2 text-[#b803d7]"></i> Punto de entrada al ecosistema emprendedor</li>
+          <li><i class="fa-solid fa-check mr-2 text-[#b803d7]"></i> Identificación de talento innovador</li>
+          <li><i class="fa-solid fa-check mr-2 text-[#b803d7]"></i> Ideas que evolucionan hacia startups</li>
+        </ul>
+      </div>
+    </article>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+<script src="js/programas.js"></script>
+
+  <!-- FOOTER -->
+  <footer class="bg-slate-950 text-slate-300">
+    <div class="mx-auto max-w-7xl px-6 py-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div>
+        <img src="img/logo.png" alt="Logo" class="h-10">
+        <p class="mt-3 text-sm text-slate-400">Incubadora de Empresas · © 2025</p>
+      </div>
+      <div>
+        <h4 class="font-semibold text-white">Enlaces</h4>
+        <ul class="mt-3 space-y-2 text-sm">
+          <li><a href="programas.html" class="hover:text-white">Programas</a></li>
+          <li><a href="eventos.html" class="hover:text-white">Eventos</a></li>
+          <li><a href="logros.html" class="hover:text-white">Logros</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-semibold text-white">Contacto</h4>
+        <p class="mt-3 text-sm">Av. Siempre Viva 123, Cusco</p>
+        <p class="text-sm">+51 999 999 999</p>
+        <p class="text-sm">incubadora@ejemplo.com</p>
+      </div>
+      <div>
+        <h4 class="font-semibold text-white">Síguenos</h4>
+        <div class="mt-3 flex gap-3">
+          <a class="inline-flex h-9 w-9 items-center justify-center rounded-full bg-white/10 hover:bg-white/20" href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a class="inline-flex h-9 w-9 items-center justify-center rounded-full bg-white/10 hover:bg-white/20" href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a class="inline-flex h-9 w-9 items-center justify-center rounded-full bg-white/10 hover:bg-white/20" href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JS: menú móvil -->
+  <script>
+    const btn = document.getElementById('navBtn');
+    const mobile = document.getElementById('mobileNav');
+    btn?.addEventListener('click', () => mobile.classList.toggle('hidden'));
+  </script>
+</body>
+</html>

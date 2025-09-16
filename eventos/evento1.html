@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Evento · Incubadora</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body class="min-h-screen flex flex-col text-white bg-[#0b0616]">
+  <!-- Fondo decorativo -->
+  <div aria-hidden="true" class="pointer-events-none fixed inset-0 -z-10">
+    <div class="absolute -top-24 -left-24 h-96 w-96 rounded-full bg-fuchsia-600/20 blur-3xl"></div>
+    <div class="absolute bottom-0 right-0 h-[32rem] w-[32rem] rounded-full bg-indigo-600/20 blur-3xl"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(1300px_500px_at_80%_10%,rgba(255,255,255,0.06),transparent)]"></div>
+  </div>
+
+  <!-- NAVBAR -->
+  <header class="sticky top-0 z-20 border-b border-white/10 bg-[#0b0616]/70 backdrop-blur">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3">
+      <a href="../index.html" class="inline-flex items-center gap-3">
+        <img src="../img/logo.png" alt="Logo" class="h-10">
+        <span class="sr-only">Inicio</span>
+      </a>
+      <nav class="hidden md:flex items-center gap-8 font-semibold">
+        <a href="../index.html" class="hover:text-[#99e3f0]">Inicio</a>
+        <a href="../programas.html" class="hover:text-[#99e3f0]">Programas</a>
+        <a href="../eventos.html" class="text-[#99e3f0]">Eventos</a>
+        <a href="../emprendimientos.html" class="hover:text-[#99e3f0]">emprendimientos</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- CONTENIDO -->
+  <main class="flex-grow">
+    <section class="mx-auto max-w-7xl px-6 py-10 md:py-14">
+      <!-- Título -->
+      <h1 class="text-3xl font-extrabold leading-tight md:text-5xl">
+        Summit de Emprendimiento 2025
+      </h1>
+
+      <!-- Meta chips -->
+      <div class="mt-4 flex flex-wrap items-center gap-3 text-sm">
+        <span class="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6l4 2"/></svg>
+          9:00 AM – 6:30 PM
+        </span>
+        <span class="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3M3 11h18M5 19h14"/></svg>
+          Abril 16, 2025
+        </span>
+        <span class="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 12.414a4 4 0 10-5.657 5.657L12 22l5.657-5.343z"/></svg>
+          Campus UNSAAC · Auditorio Principal
+        </span>
+      </div>
+
+      <!-- Layout 2 columnas -->
+      <div class="mt-8 grid gap-10 md:grid-cols-[minmax(0,1fr)_360px]">
+        <!-- Columna principal -->
+        <div class="space-y-10">
+          <!-- Imagen principal -->
+          <div class="overflow-hidden rounded-2xl ring-1 ring-white/10">
+            <img src="../img/portada.jpg" alt="Summit de Emprendimiento"
+                 class="h-auto w-full object-cover">
+          </div>
+
+          <!-- Detalles / texto -->
+          <section id="detalle" class="space-y-4 scroll-mt-24">
+            <h2 class="text-2xl font-bold">Detalles del evento</h2>
+            <p class="text-white/80">
+              Únete a una jornada intensiva de charlas, paneles y talleres prácticos para
+              impulsar tu proyecto. Conecta con fundadores, mentores e inversores y descubre
+              herramientas concretas para validar, lanzar y escalar.
+            </p>
+            <p class="text-white/80">
+              El evento está orientado a emprendedores en etapa idea, validación y primeras ventas.
+              No se requiere experiencia previa; sí muchas ganas de aprender y construir.
+            </p>
+          </section>
+
+            <!-- Expositores con efecto de elipses giratorias -->
+
+            <section class="mx-auto max-w-7xl px-6 py-14">
+                <h2 class="mb-8 text-3xl font-bold">Expositores</h2>
+              
+                <div id="speakers-carousel" class="relative">
+                  <!-- Viewport -->
+                  <div data-viewport class="overflow-hidden">
+                    <!-- Track -->
+                    <ul data-track class="flex transition-transform duration-500 will-change-transform">
+                      <!-- Slide 1 -->
+                      <li class="flex-none w-full md:w-1/2 px-4">
+                        <article class="group text-center">
+                          <div class="relative mx-auto h-64 w-64">
+                            <img src="../img/portada.jpg" alt="Ponente"
+                                 class="h-full w-full rounded-full object-cover
+                                        ring-2 ring-white/20 transition-all duration-300
+                                        group-hover:ring-fuchsia-500 group-hover:shadow-[0_0_28px_6px_rgba(217,70,239,.45)]
+                                        focus-visible:ring-fuchsia-500 focus-visible:shadow-[0_0_28px_6px_rgba(217,70,239,.45)]"/>
+                          </div>
+                          <h3 class="mt-6 text-xl font-semibold">Nombre del Ponente</h3>
+                          <p class="text-sm text-white/70">Cargo · Organización</p>
+                        </article>
+                      </li>
+              
+                      <!-- Slide 2 -->
+                      <li class="flex-none w-full md:w-1/2 px-4">
+                        <article class="group text-center">
+                          <div class="relative mx-auto h-64 w-64">
+                            <img src="../img/portada.jpg" alt="Ponente"
+                                 class="h-full w-full rounded-full object-cover
+                                        ring-2 ring-white/20 transition-all duration-300
+                                        group-hover:ring-fuchsia-500 group-hover:shadow-[0_0_28px_6px_rgba(217,70,239,.45)]
+                                        focus-visible:ring-fuchsia-500 focus-visible:shadow-[0_0_28px_6px_rgba(217,70,239,.45)]"/>
+                          </div>
+                          <h3 class="mt-6 text-xl font-semibold">Nombre del Ponente</h3>
+                          <p class="text-sm text-white/70">Cargo · Organización 1</p>
+                        </article>
+                      </li>
+              
+                     
+              
+                      <!-- agrega más <li> si quieres -->
+                    </ul>
+                  </div>
+              
+                  <!-- Controles -->
+                  <button type="button" data-prev
+                          class="absolute left-0 top-1/2 -translate-y-1/2 rounded-full bg-white/10 px-3 py-2 ring-1 ring-white/20 backdrop-blur hover:bg-white/20">
+                    ‹
+                  </button>
+                  <button type="button" data-next
+                          class="absolute right-0 top-1/2 -translate-y-1/2 rounded-full bg-white/10 px-3 py-2 ring-1 ring-white/20 backdrop-blur hover:bg-white/20">
+                    ›
+                  </button>
+                </div>
+              </section>
+              
+          
+          
+          
+
+          <!-- Cronograma -->
+          <section id="cronograma" class="scroll-mt-24">
+            <h2 class="mb-5 text-2xl font-bold">Cronograma</h2>
+            <div class="overflow-hidden rounded-xl border border-white/10">
+              <ul class="divide-y divide-white/10">
+                <li class="flex flex-col gap-2 bg-white/5 p-4 sm:flex-row sm:items-center sm:justify-between">
+                  <div>
+                    <p class="font-semibold">Acreditación & Coffee</p>
+                    <p class="text-sm text-white/70">Bienvenida y networking inicial</p>
+                  </div>
+                  <span class="rounded-full bg-white/10 px-3 py-1 text-sm">09:00–09:30</span>
+                </li>
+                <li class="flex flex-col gap-2 p-4 sm:flex-row sm:items-center sm:justify-between">
+                  <div>
+                    <p class="font-semibold">Keynote: Del problema al producto</p>
+                    <p class="text-sm text-white/70">María López</p>
+                  </div>
+                  <span class="rounded-full bg-white/10 px-3 py-1 text-sm">09:30–10:30</span>
+                </li>
+                <li class="flex flex-col gap-2 bg-white/5 p-4 sm:flex-row sm:items-center sm:justify-between">
+                  <div>
+                    <p class="font-semibold">Panel: Finanzas para crecer</p>
+                    <p class="text-sm text-white/70">Alex Quispe · Jorge Ramos</p>
+                  </div>
+                  <span class="rounded-full bg-white/10 px-3 py-1 text-sm">10:45–11:30</span>
+                </li>
+                <li class="flex flex-col gap-2 p-4 sm:flex-row sm:items-center sm:justify-between">
+                  <div>
+                    <p class="font-semibold">Taller: MVP en 90 minutos</p>
+                    <p class="text-sm text-white/70">Equipo incubadora</p>
+                  </div>
+                  <span class="rounded-full bg-white/10 px-3 py-1 text-sm">11:45–13:15</span>
+                </li>
+                <li class="flex flex-col gap-2 bg-white/5 p-4 sm:flex-row sm:items-center sm:justify-between">
+                  <div>
+                    <p class="font-semibold">Demo & Networking</p>
+                    <p class="text-sm text-white/70">Presentación de proyectos</p>
+                  </div>
+                  <span class="rounded-full bg-white/10 px-3 py-1 text-sm">16:30–18:30</span>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </div>
+
+        <!-- Sidebar sticky (desktop) -->
+        <aside class="hidden md:block">
+          <div class="sticky top-24 space-y-4">
+            <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
+              <h3 class="mb-2 text-lg font-semibold">Información</h3>
+              <ul class="space-y-2 text-sm text-white/80">
+                <li><strong>Lugar:</strong> Campus UNSAAC · Auditorio Principal</li>
+                <li><strong>Fecha:</strong> 16 de abril, 2025</li>
+                <li><strong>Horario:</strong> 9:00 AM – 6:30 PM</li>
+              </ul>
+            </div>
+
+            <a href="#registro"
+               class="block rounded-full bg-white px-6 py-3 text-center font-semibold text-black ring-1 ring-white/20 hover:bg-white/90">
+              Registrarse
+            </a>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <!-- Botón fijo en móviles -->
+  <div class="fixed inset-x-0 bottom-0 z-20 bg-gradient-to-t from-[#0b0616] via-[#0b0616]/95 to-transparent p-4 md:hidden">
+    <a href="#registro"
+       class="block w-full rounded-full bg-white px-6 py-3 text-center font-semibold text-black ring-1 ring-white/20 hover:bg-white/90">
+      Registrarse
+    </a>
+  </div>
+
+  <script src="../js/speakers-ring.js"></script>
+  <script src="../js/speakers-carousel.js"></script>
+
+
+  <!-- FOOTER -->
+  <footer class="mt-auto border-t border-white/10 bg-[#0b0616] py-8 text-center text-white/70">
+    <p>© 2025 Incubadora de Empresas</p>
+  </footer>
+
+  <!-- (Opcional) Ancla de registro -->
+  <div id="registro" class="sr-only" aria-hidden="true"></div>
+</body>
+</html>

@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Incubadora - Eventos</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="min-h-screen flex flex-col text-white bg-[#0b0616]">
+  <!-- Fondo decorativo -->
+  <div aria-hidden="true" class="pointer-events-none fixed inset-0 -z-10">
+    <div class="absolute -top-24 -left-24 h-96 w-96 rounded-full bg-fuchsia-600/20 blur-3xl"></div>
+    <div class="absolute bottom-0 right-0 h-[32rem] w-[32rem] rounded-full bg-indigo-600/20 blur-3xl"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(1300px_500px_at_80%_10%,rgba(255,255,255,0.06),transparent)]"></div>
+  </div>
+
+  <!-- NAVBAR -->
+  <header class="sticky top-0 z-20 border-b border-white/10 bg-[#0b0616]/70 backdrop-blur">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3">
+      <a href="index.html" class="inline-flex items-center gap-3">
+        <img src="img/logo.png" alt="Logo" class="h-10">
+        <span class="sr-only">Inicio</span>
+      </a>
+      <nav class="hidden md:flex items-center gap-8 font-semibold">
+        <a href="index.html" class="hover:text-[#99e3f0]">Inicio</a>
+        <a href="programas.html" class="hover:text-[#99e3f0]">Programas</a>
+        <a href="eventos.html" class="text-[#99e3f0]">Eventos</a>
+        <a href="emprendimientos.html" class="hover:text-[#99e3f0]">Emprendimientos</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- CARRUSEL: texto + imagen por slide -->
+  <section class="relative">
+    <div id="hero-carousel" class="mx-auto max-w-7xl px-6 py-10 md:py-16">
+      <div class="relative overflow-hidden rounded-2xl ring-1 ring-white/10">
+        <!-- Track -->
+        <div class="flex transition-transform duration-500" data-track>
+          <!-- ========== SLIDE 1 ========== -->
+          <article class="min-w-full">
+            <div class="grid items-center gap-8 p-6 md:grid-cols-2 md:p-10">
+              <!-- Texto -->
+              <div class="space-y-5">
+                <p class="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1 text-sm">
+                  <span class="h-2 w-2 rounded-full bg-emerald-400"></span>
+                  Calendario 2025 disponible
+                </p>
+                <h1 class="text-4xl font-extrabold leading-tight md:text-5xl">
+                  Summit de Emprendimiento 2025
+                </h1>
+                <p class="text-white/80 max-w-xl">
+                  Conecta con fundadores, mentores e inversores en una jornada de charlas y mentorías.
+                </p>
+                <a href="eventos/evento1.html" class="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 font-semibold text-black ring-1 ring-white/20 hover:bg-white/90">Más información</a>
+              </div>
+              <!-- Imagen -->
+              <div class="relative">
+                <div class="aspect-[16/11] w-full overflow-hidden rounded-xl ring-1 ring-white/10">
+                  <img src="img/portada.jpg" alt="Summit 2025" class="h-full w-full object-cover">
+                </div>
+                <span class="absolute left-4 top-4 inline-flex items-center gap-2 rounded-md bg-fuchsia-600 px-3 py-1 text-sm font-semibold">
+                  <span class="inline-block h-2 w-2 rounded-full bg-white/80"></span> Destacado
+                </span>
+              </div>
+            </div>
+          </article>
+
+          <!-- ========== SLIDE 2 ========== -->
+          <article class="min-w-full">
+            <div class="grid items-center gap-8 p-6 md:grid-cols-2 md:p-10">
+              <div class="space-y-5">
+                <p class="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1 text-sm">
+                  <span class="h-2 w-2 rounded-full bg-emerald-400"></span>
+                  Cupos limitados
+                </p>
+                <h2 class="text-4xl font-extrabold leading-tight md:text-5xl">
+                  Bootcamp de Innovación 2025
+                </h2>
+                <p class="text-white/80 max-w-xl">
+                  Aprende a validar problemas, diseñar soluciones y lanzar un MVP con mentores.
+                </p>
+                <a href="#mas-info" class="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 font-semibold text-black ring-1 ring-white/20 hover:bg-white/90">Más información</a>
+              </div>
+              <div class="relative">
+                <div class="aspect-[16/11] w-full overflow-hidden rounded-xl ring-1 ring-white/10">
+                  <img src="img/portada.jpg" alt="Bootcamp 2025" class="h-full w-full object-cover">
+                </div>
+                <span class="absolute left-4 top-4 inline-flex items-center gap-2 rounded-md bg-fuchsia-600 px-3 py-1 text-sm font-semibold">
+                  <span class="inline-block h-2 w-2 rounded-full bg-white/80"></span> Destacado
+                </span>
+              </div>
+            </div>
+          </article>
+
+          <!-- ========== SLIDE 3 ========== -->
+          <article class="min-w-full">
+            <div class="grid items-center gap-8 p-6 md:grid-cols-2 md:p-10">
+              <div class="space-y-5">
+                <p class="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1 text-sm">
+                  <span class="h-2 w-2 rounded-full bg-emerald-400"></span>
+                  Entrada libre
+                </p>
+                <h2 class="text-4xl font-extrabold leading-tight md:text-5xl">
+                  Semana del Emprendimiento
+                </h2>
+                <p class="text-white/80 max-w-xl">
+                  Charlas, paneles y networking durante cinco días con casos reales de startups.
+                </p>
+                <a href="#mas-info" class="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 font-semibold text-black ring-1 ring-white/20 hover:bg-white/90">Más información</a>
+              </div>
+              <div class="relative">
+                <div class="aspect-[16/11] w-full overflow-hidden rounded-xl ring-1 ring-white/10">
+                  <img src="img/portada.jpg" alt="Semana del Emprendimiento" class="h-full w-full object-cover">
+                </div>
+                <span class="absolute left-4 top-4 inline-flex items-center gap-2 rounded-md bg-fuchsia-600 px-3 py-1 text-sm font-semibold">
+                  <span class="inline-block h-2 w-2 rounded-full bg-white/80"></span> Destacado
+                </span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Controles -->
+        <button type="button" class="group absolute left-2 top-1/2 -translate-y-1/2 rounded-full bg-black/40 p-2 ring-1 ring-white/20 hover:bg-black/60" data-prev aria-label="Anterior">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+        </button>
+        <button type="button" class="group absolute right-2 top-1/2 -translate-y-1/2 rounded-full bg-black/40 p-2 ring-1 ring-white/20 hover:bg-black/60" data-next aria-label="Siguiente">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+        </button>
+
+        <!-- Dots -->
+        <div class="absolute bottom-3 left-0 right-0 flex items-center justify-center gap-2">
+          <button class="h-2.5 w-2.5 rounded-full bg-white/40 data-[active=true]:bg-white" data-dot="0" aria-label="1"></button>
+          <button class="h-2.5 w-2.5 rounded-full bg-white/40 data-[active=true]:bg-white" data-dot="1" aria-label="2"></button>
+          <button class="h-2.5 w-2.5 rounded-full bg-white/40 data-[active=true]:bg-white" data-dot="2" aria-label="3"></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <!-- SECCIÓN MÁS lista de eventos-->
+
+  <!-- evento 1 -->
+<section class="relative mx-auto max-w-7xl px-6 py-10 flex-y space-y-8">
+
+
+  <!-- Banner evento destacado 1 -->
+  <article id="banner-evento1"
+           class="relative overflow-hidden rounded-[28px] bg-gradient-to-br from-[#1a0f2e] to-[#2a0d3d] p-6 text-white ring-1 ring-white/10 transition
+                  hover:ring-2 hover:ring-fuchsia-500/60 hover:shadow-[0_0_0_1px_rgba(255,0,255,.25),0_30px_120px_-20px_rgba(124,58,237,.35)]
+                  md:p-10"
+           data-corner-neon>
+    <div class="grid items-center gap-8 md:grid-cols-2">
+      <!-- Imagen -->
+      <div class="relative">
+        <div class="group aspect-[16/11] w-full overflow-hidden rounded-2xl bg-black/40 ring-1 ring-white/10">
+          <img src="img/portada.jpg" alt="Evento destacado"
+               class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+        </div>
+        <span class="absolute left-4 top-4 inline-flex items-center gap-2 rounded-md bg-fuchsia-600 px-3 py-1 text-sm font-semibold">
+          <span class="inline-block h-2 w-2 rounded-full bg-white/80"></span>
+          conference
+        </span>
+      </div>
+
+      <!-- Contenido -->
+      <div class="space-y-5">
+        <div class="flex flex-wrap items-center gap-3">
+          <span class="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-sm">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6l4 2"/></svg>
+            9.00 – 9.30 PM
+          </span>
+          <span class="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-sm">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3M3 11h18M5 19h14"/></svg>
+            March 23, 2024
+          </span>
+        </div>
+
+        <h2 class="text-3xl font-bold leading-tight md:text-4xl">
+          Challenges of a new Branding technique in Year 2024
+        </h2>
+
+        <p class="text-white/80">
+          Assessing the effectiveness of new branding techniques can be challenging
+        </p>
+
+        <div class="pt-2">
+          <a href="#" class="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 font-semibold text-black ring-1 ring-white/20 hover:bg-white/90">
+            Más información
+          </a>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+   <!-- ESQUINA NEÓN (SVG overlay) -->
+<div class="pointer-events-none absolute right-0 top-0 h-full w-1/2 opacity-0 transition-opacity duration-300" data-neon-overlay>
+  <svg viewBox="0 0 800 450" class="absolute right-0 top-0 h-full w-full">
+    <defs>
+      <linearGradient id="neonGrad" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#ff4bd1"/>
+        <stop offset="60%" stop-color="#8b5cf6"/>
+        <stop offset="100%" stop-color="#3b82f6"/>
+      </linearGradient>
+      <filter id="blur-8" x="-50%" y="-50%" width="200%" height="200%">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="4"/>
+      </filter>
+    </defs>
+
+    <!-- varias ondas curvas desde la esquina -->
+    <path d="M800,0 Q600,80 400,200" fill="none" stroke="url(#neonGrad)" stroke-opacity=".18" stroke-width="3"/>
+    <path d="M800,20 Q600,100 380,220" fill="none" stroke="url(#neonGrad)" stroke-opacity=".14" stroke-width="3"/>
+    <path d="M800,40 Q600,120 360,240" fill="none" stroke="url(#neonGrad)" stroke-opacity=".12" stroke-width="3"/>
+    <path d="M800,60 Q600,140 340,260" fill="none" stroke="url(#neonGrad)" stroke-opacity=".1" stroke-width="3"/>
+
+    <!-- línea animada principal -->
+    <path id="neon-stroke"
+          d="M800,10 Q600,90 390,230"
+          fill="none" stroke="url(#neonGrad)" stroke-width="5" stroke-linecap="round"
+          filter="url(#blur-8)" />
+  </svg>
+</div>
+
+<!-- borde interior luminoso (hover) -->
+<div class="pointer-events-none absolute inset-0 rounded-[28px] ring-1 ring-fuchsia-500/0 transition duration-300 group-[.hover]:ring-fuchsia-500/40"></div>
+
+</article>
+<!-- Banner evento destacado -->
+<article id="banner-evento"
+class="relative overflow-hidden rounded-[28px] bg-gradient-to-br from-[#1a0f2e] to-[#2a0d3d] p-6 text-white ring-1 ring-white/10 transition
+       hover:ring-2 hover:ring-fuchsia-500/60 hover:shadow-[0_0_0_1px_rgba(255,0,255,.25),0_30px_120px_-20px_rgba(124,58,237,.35)]
+       md:p-10"
+data-corner-neon>
+<div class="grid items-center gap-8 md:grid-cols-2">
+<!-- Imagen -->
+<div class="relative">
+<div class="group aspect-[16/11] w-full overflow-hidden rounded-2xl bg-black/40 ring-1 ring-white/10">
+<img src="img/portada.jpg" alt="Evento destacado"
+    class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+</div>
+<span class="absolute left-4 top-4 inline-flex items-center gap-2 rounded-md bg-fuchsia-600 px-3 py-1 text-sm font-semibold">
+<span class="inline-block h-2 w-2 rounded-full bg-white/80"></span>
+conference
+</span>
+</div>
+
+<!-- Contenido -->
+<div class="space-y-5">
+<div class="flex flex-wrap items-center gap-3">
+<span class="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-sm">
+ <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6l4 2"/></svg>
+ 9.00 – 9.30 PM
+</span>
+<span class="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-sm">
+ <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3M3 11h18M5 19h14"/></svg>
+ March 23, 2024
+</span>
+</div>
+
+<h2 class="text-3xl font-bold leading-tight md:text-4xl">
+Challenges of a new Branding technique in Year 2024
+</h2>
+
+<p class="text-white/80">
+Assessing the effectiveness of new branding techniques can be challenging
+</p>
+
+<div class="pt-2">
+<a href="#" class="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 font-semibold text-black ring-1 ring-white/20 hover:bg-white/90">
+ Más información
+</a>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+<!-- ESQUINA NEÓN (SVG overlay) -->
+<div class="pointer-events-none absolute right-0 top-0 h-full w-1/2 opacity-0 transition-opacity duration-300" data-neon-overlay>
+<svg viewBox="0 0 800 450" class="absolute right-0 top-0 h-full w-full">
+<defs>
+<linearGradient id="neonGrad" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0%" stop-color="#ff4bd1"/>
+<stop offset="60%" stop-color="#8b5cf6"/>
+<stop offset="100%" stop-color="#3b82f6"/>
+</linearGradient>
+<filter id="blur-8" x="-50%" y="-50%" width="200%" height="200%">
+<feGaussianBlur in="SourceGraphic" stdDeviation="4"/>
+</filter>
+</defs>
+
+<!-- varias ondas curvas desde la esquina -->
+<path d="M800,0 Q600,80 400,200" fill="none" stroke="url(#neonGrad)" stroke-opacity=".18" stroke-width="3"/>
+<path d="M800,20 Q600,100 380,220" fill="none" stroke="url(#neonGrad)" stroke-opacity=".14" stroke-width="3"/>
+<path d="M800,40 Q600,120 360,240" fill="none" stroke="url(#neonGrad)" stroke-opacity=".12" stroke-width="3"/>
+<path d="M800,60 Q600,140 340,260" fill="none" stroke="url(#neonGrad)" stroke-opacity=".1" stroke-width="3"/>
+
+<!-- línea animada principal -->
+<path id="neon-stroke"
+d="M800,10 Q600,90 390,230"
+fill="none" stroke="url(#neonGrad)" stroke-width="5" stroke-linecap="round"
+filter="url(#blur-8)" />
+</svg>
+</div>
+
+<!-- borde interior luminoso (hover) -->
+<div class="pointer-events-none absolute inset-0 rounded-[28px] ring-1 ring-fuchsia-500/0 transition duration-300 group-[.hover]:ring-fuchsia-500/40"></div>
+
+</article>
+
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- FOOTER -->
+  <footer class="mt-auto border-t border-white/10 bg-[#0b0616] py-8 text-center text-white/70">
+    <p>© 2025 Incubadora de Empresas</p>
+  </footer>
+
+  <!-- JS del carrusel -->
+  <script src="js/carousel.js"></script>
+  <script src="js/event.js"></script>
+  <script src="js/corner-neon.js"></script>
+
+</body>
+</html>

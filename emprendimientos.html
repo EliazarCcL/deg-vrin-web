@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Incubadora - Emprendimientos</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen flex flex-col bg-[#0b0616] text-white font-sans">
+
+  <!-- FONDO NEÓN -->
+  <div aria-hidden="true" class="pointer-events-none fixed inset-0 -z-10">
+    <!-- blobs -->
+    <div class="absolute -top-24 -left-24 h-96 w-96 rounded-full bg-fuchsia-600/25 blur-3xl"></div>
+    <div class="absolute -bottom-24 -right-24 h-[32rem] w-[32rem] rounded-full bg-indigo-600/25 blur-3xl"></div>
+    <!-- gradiente radial -->
+    <div class="absolute inset-0 bg-[radial-gradient(1200px_500px_at_80%_10%,rgba(255,255,255,0.08),transparent)]"></div>
+    <!-- textura sutil -->
+    <div class="absolute inset-0 opacity-[0.045] bg-[linear-gradient(0deg,transparent_24px,rgba(255,255,255,0.06)_25px),linear-gradient(90deg,transparent_24px,rgba(255,255,255,0.06)_25px)] bg-[size:25px_25px]"></div>
+  </div>
+
+  <!-- NAVBAR (igual que el tuyo) -->
+  <header class="absolute top-0 left-0 w-full flex justify-between items-center px-4 z-10 bg-[#473273]">
+    <a href="index.html">
+      <img src="img/logo.png" alt="Logo" class="h-16">
+    </a>
+    <nav class="hidden md:flex space-x-6 text-white font-bold">
+      <a href="index.html" class="hover:text-[#99e3f0]">Inicio</a>
+      <a href="programas.html" class="hover:text-[#99e3f0]">Programas</a>
+      <a href="eventos.html" class="hover:text-[#99e3f0]">Eventos</a>
+      <a href="emprendimientos.html" class="hover:text-[#99e3f0]">Emprendimientos</a>
+    </nav>
+  </header>
+
+  <!-- CONTENIDO -->
+  <main class="flex-grow max-w-6xl mx-auto px-6 pt-28 pb-16">
+    <h1 class="text-4xl font-bold mb-6">EMPRENDIMIENTOS</h1>
+    <p class="text-lg leading-relaxed text-white/80">
+      Descubre los proyectos incubados: filtra por sector y encuentra soluciones tech, agro, salud, educación y más.
+    </p>
+  </main>
+
+  <!-- LISTA DE EMPRENDIMIENTOS + BUSCADOR -->
+  <section id="pelis" class="mx-auto max-w-[90rem] px-8 py-12">
+    <div class="mb-10 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+      <h2 class="text-3xl font-bold">Emprendimientos</h2>
+
+      <!-- Buscador + filtros -->
+      <div class="flex w-full items-center gap-3">
+        <div class="relative flex-1">
+          <input id="buscar-pelis" type="text" placeholder="Buscar por nombre, sector, tags…"
+                 class="w-full rounded-full border border-white/10 bg-white/5 px-6 py-4 pr-12 text-base outline-none placeholder-white/50 focus:border-fuchsia-500">
+          <span class="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-white/60">⌕</span>
+        </div>
+
+        <select id="filtro-genero"
+                class="rounded-full border border-white/10 bg-white/5 px-5 py-4 text-base focus:border-fuchsia-500">
+          <option value="all">Todos</option>
+          <option value="tech">Tech</option>
+          <option value="agro">Agro</option>
+          <option value="salud">Salud</option>
+          <option value="educacion">Educación</option>
+          <option value="fintech">Fintech</option>
+          <option value="manufactura">Manufactura</option>
+          <option value="turismo">Turismo</option>
+          <option value="impacto">Impacto</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Grid de cards -->
+    <div id="grid-pelis"
+         class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4
+                [grid-template-columns:repeat(auto-fit,minmax(280px,1fr))]">
+
+      <!-- TECH -->
+      <article class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-5 transition
+                      hover:-translate-y-1 hover:border-fuchsia-400/50 hover:shadow-[0_10px_40px_-10px_rgba(217,70,239,.45)]"
+               data-title="nywa" data-genero="digital" data-year="2024" data-tags="comercio digital">
+        <!-- badge -->
+        <span class="absolute left-4 top-4 z-10 rounded-full bg-fuchsia-600 text-white text-xs font-semibold px-3 py-1 shadow-md">
+          Digital
+        </span>
+
+        <!-- imagen -->
+        <div class="relative overflow-hidden rounded-lg ring-1 ring-white/10">
+          <img src="emprendimientos/emp-1/nywa.png" alt="nywa"
+               class="h-64 w-full object-cover transition-transform duration-500 group-hover:scale-105">
+        </div>
+
+        <!-- texto + logo al costado -->
+        <div class="mt-4 flex items-start justify-between gap-3">
+          <div>
+            <h3 class="text-lg font-semibold leading-tight">NYWA</h3>
+            <p class="text-sm text-white/60">Sector: Digital · 2024</p>
+          </div>
+          <!-- logo -->
+          <!-- <img src="img/portada.jpg" alt="Logo" class="h-16 opacity-90 z-10"> -->
+        </div>
+
+        <a href="emprendimientos/emp-1/emprendimiento1.html" class="mt-4 inline-flex items-center justify-center rounded-full bg-white px-5 py-2 text-sm font-semibold text-black ring-1 ring-white/20 hover:bg-white/90">
+          Más información
+        </a>
+      </article>
+
+
+      <!-- segundo emprendimiento-->
+      <article class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-5 transition
+                      hover:-translate-y-1 hover:border-emerald-400/50 hover:shadow-[0_10px_40px_-10px_rgba(16,185,129,.35)]"
+               data-title="aliada" data-genero="digital" data-year="2024" data-tags="aplicacion prevencion y seguridad femenina">
+        <span class="absolute left-4 top-4 z-10 rounded-full bg-emerald-600 text-white text-xs font-semibold px-3 py-1 shadow-md">
+          Digital
+        </span>
+        <div class="relative overflow-hidden rounded-lg ring-1 ring-white/10">
+          <img src="emprendimientos/emp-2/aliada.png" alt="Aliada"
+               class="h-64 w-full object-cover transition-transform duration-500 group-hover:scale-105">
+        </div>
+        <div class="mt-4 flex items-start justify-between gap-3">
+          <div>
+            <h3 class="text-lg font-semibold leading-tight">Aliada</h3>
+            <p class="text-sm text-white/60">Sector: Digital · 2024</p>
+          </div>
+          <!-- <img src="img/logo.png" alt="Logo" class="h-8 opacity-90"> -->
+        </div>
+        <a href="emprendimientos/emp-2/emprendimiento2.html" class="mt-4 inline-flex items-center justify-center rounded-full bg-white px-5 py-2 text-sm font-semibold text-black ring-1 ring-white/20 hover:bg-white/90">
+          Más información
+        </a>
+      </article>
+
+      <!-- tercer emprendimiento-->
+      <article class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-5 transition
+                      hover:-translate-y-1 hover:border-rose-400/50 hover:shadow-[0_10px_40px_-10px_rgba(244,63,94,.35)]"
+               data-title="Reclutar AI" data-genero="digital" data-year="2024" data-tags="app de reclutar ai">
+        <span class="absolute left-4 top-4 z-10 rounded-full bg-rose-600 text-white text-xs font-semibold px-3 py-1 shadow-md">
+          Digital
+        </span>
+        <div class="relative overflow-hidden rounded-lg ring-1 ring-white/10">
+          <img src="emprendimientos/emp-3/reclutarai.png" alt="reglutar ai"
+               class="h-64 w-full object-cover transition-transform duration-500 group-hover:scale-105">
+        </div>
+        <div class="mt-4 flex items-start justify-between gap-3">
+          <div>
+            <h3 class="text-lg font-semibold leading-tight">Reclutar Ai</h3>
+            <p class="text-sm text-white/60">Sector: Digital · 2024</p>
+          </div>
+          <!-- <img src="img/logo.png" alt="Logo" class="h-8 opacity-90"> -->
+        </div>
+        <a href="emprendimientos/emp-3/emprendimiento3.html" class="mt-4 inline-flex items-center justify-center rounded-full bg-white px-5 py-2 text-sm font-semibold text-black ring-1 ring-white/20 hover:bg-white/90">
+          Más información
+        </a>
+      </article>
+
+      <!-- EDUCACIÓN -->
+      <article class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-5 transition
+                      hover:-translate-y-1 hover:border-indigo-400/50 hover:shadow-[0_10px_40px_-10px_rgba(99,102,241,.35)]"
+               data-title="EduLab" data-genero="educacion" data-year="2025" data-tags="edtech cursos tutorias LMS">
+        <span class="absolute left-4 top-4 z-10 rounded-full bg-indigo-600 text-white text-xs font-semibold px-3 py-1 shadow-md">
+          Educación
+        </span>
+        <div class="relative overflow-hidden rounded-lg ring-1 ring-white/10">
+          <img src="img/portada.jpg" alt="EduLab"
+               class="h-64 w-full object-cover transition-transform duration-500 group-hover:scale-105">
+        </div>
+        <div class="mt-4 flex items-start justify-between gap-3">
+          <div>
+            <h3 class="text-lg font-semibold leading-tight">EduLab</h3>
+            <p class="text-sm text-white/60">Sector: Educación · 2025</p>
+          </div>
+          <img src="img/logo.png" alt="Logo" class="h-8 opacity-90">
+        </div>
+        <a href="#" class="mt-4 inline-flex items-center justify-center rounded-full bg-white px-5 py-2 text-sm font-semibold text-black ring-1 ring-white/20 hover:bg-white/90">
+          Más información
+        </a>
+      </article>
+
+      <!-- FINTECH -->
+      <article class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-5 transition
+                      hover:-translate-y-1 hover:border-cyan-400/50 hover:shadow-[0_10px_40px_-10px_rgba(34,211,238,.35)]"
+               data-title="FinBox" data-genero="fintech" data-year="2024" data-tags="pagos billetera credit scoring microfinanzas">
+        <span class="absolute left-4 top-4 z-10 rounded-full bg-cyan-600 text-white text-xs font-semibold px-3 py-1 shadow-md">
+          Fintech
+        </span>
+        <div class="relative overflow-hidden rounded-lg ring-1 ring-white/10">
+          <img src="img/portada.jpg" alt="FinBox"
+               class="h-64 w-full object-cover transition-transform duration-500 group-hover:scale-105">
+        </div>
+        <div class="mt-4 flex items-start justify-between gap-3">
+          <div>
+            <h3 class="text-lg font-semibold leading-tight">FinBox</h3>
+            <p class="text-sm text-white/60">Sector: Fintech · 2024</p>
+          </div>
+          <img src="img/logo.png" alt="Logo" class="h-8 opacity-90">
+        </div>
+        <a href="#" class="mt-4 inline-flex items-center justify-center rounded-full bg-white px-5 py-2 text-sm font-semibold text-black ring-1 ring-white/20 hover:bg-white/90">
+          Más información
+        </a>
+      </article>
+
+      <!-- MANUFACTURA -->
+      <article class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-5 transition
+                      hover:-translate-y-1 hover:border-orange-400/50 hover:shadow-[0_10px_40px_-10px_rgba(251,146,60,.35)]"
+               data-title="TextilAndino" data-genero="manufactura" data-year="2022" data-tags="moda alpaca confección cadena suministro">
+        <span class="absolute left-4 top-4 z-10 rounded-full bg-orange-600 text-white text-xs font-semibold px-3 py-1 shadow-md">
+          Manufactura
+        </span>
+        <div class="relative overflow-hidden rounded-lg ring-1 ring-white/10">
+          <img src="img/portada.jpg" alt="TextilAndino"
+               class="h-64 w-full object-cover transition-transform duration-500 group-hover:scale-105">
+        </div>
+        <div class="mt-4 flex items-start justify-between gap-3">
+          <div>
+            <h3 class="text-lg font-semibold leading-tight">TextilAndino</h3>
+            <p class="text-sm text-white/60">Sector: Manufactura · 2022</p>
+          </div>
+          <img src="img/logo.png" alt="Logo" class="h-8 opacity-90">
+        </div>
+        <a href="#" class="mt-4 inline-flex items-center justify-center rounded-full bg-white px-5 py-2 text-sm font-semibold text-black ring-1 ring-white/20 hover:bg-white/90">
+          Más información
+        </a>
+      </article>
+
+      <!-- TURISMO -->
+      <article class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-5 transition
+                      hover:-translate-y-1 hover:border-sky-400/50 hover:shadow-[0_10px_40px_-10px_rgba(56,189,248,.35)]"
+               data-title="CuscoTours" data-genero="turismo" data-year="2025" data-tags="viajes tours sostenible reservas">
+        <span class="absolute left-4 top-4 z-10 rounded-full bg-sky-600 text-white text-xs font-semibold px-3 py-1 shadow-md">
+          Turismo
+        </span>
+        <div class="relative overflow-hidden rounded-lg ring-1 ring-white/10">
+          <img src="img/portada.jpg" alt="CuscoTours"
+               class="h-64 w-full object-cover transition-transform duration-500 group-hover:scale-105">
+        </div>
+        <div class="mt-4 flex items-start justify-between gap-3">
+          <div>
+            <h3 class="text-lg font-semibold leading-tight">CuscoTours</h3>
+            <p class="text-sm text-white/60">Sector: Turismo · 2025</p>
+          </div>
+          <img src="img/logo.png" alt="Logo" class="h-8 opacity-90">
+        </div>
+        <a href="#" class="mt-4 inline-flex items-center justify-center rounded-full bg-white px-5 py-2 text-sm font-semibold text-black ring-1 ring-white/20 hover:bg-white/90">
+          Más información
+        </a>
+      </article>
+
+      <!-- IMPACTO -->
+      <article class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-5 transition
+                      hover:-translate-y-1 hover:border-lime-400/50 hover:shadow-[0_10px_40px_-10px_rgba(132,204,22,.35)]"
+               data-title="EcoImpacto" data-genero="impacto" data-year="2023" data-tags="reciclaje economía circular huella carbono">
+        <span class="absolute left-4 top-4 z-10 rounded-full bg-lime-600 text-white text-xs font-semibold px-3 py-1 shadow-md">
+          Impacto
+        </span>
+        <div class="relative overflow-hidden rounded-lg ring-1 ring-white/10">
+          <img src="img/portada.jpg" alt="EcoImpacto"
+               class="h-64 w-full object-cover transition-transform duration-500 group-hover:scale-105">
+        </div>
+        <div class="mt-4 flex items-start justify-between gap-3">
+          <div>
+            <h3 class="text-lg font-semibold leading-tight">EcoImpacto</h3>
+            <p class="text-sm text-white/60">Sector: Impacto · 2023</p>
+          </div>
+          <img src="img/logo.png" alt="Logo" class="h-8 opacity-90">
+        </div>
+        <a href="#" class="mt-4 inline-flex items-center justify-center rounded-full bg-white px-5 py-2 text-sm font-semibold text-black ring-1 ring-white/20 hover:bg-white/90">
+          Más información
+        </a>
+      </article>
+
+    </div>
+
+    <!-- Sin resultados -->
+    <p id="sin-resultados" class="mt-8 hidden rounded-xl border border-white/10 bg-white/5 p-5 text-center text-white/70">
+      No se encontraron resultados.
+    </p>
+  </section>
+
+  <!-- FOOTER -->
+  <script src="js/movies-search.js"></script>
+
+  <footer class="bg-gray-900/60 text-gray-300 text-center py-6 border-t border-white/10">
+    <p>© 2025 Incubadora de Empresas</p>
+  </footer>
+
+</body>
+</html>

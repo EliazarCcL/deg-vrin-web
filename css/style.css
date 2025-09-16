@@ -1,0 +1,312 @@
+/* Animaciones personalizadas */
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Estado inicial (oculto) */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+/* Activo al entrar */
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Animaciones personalizadas */
+.active.animate-slide-left {
+  animation: slideInLeft 1s ease-out forwards;
+}
+
+.active.animate-slide-right {
+  animation: slideInRight 1s ease-out forwards;
+}
+
+@keyframes fadeUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.reveal-up {
+  opacity: 0;
+}
+
+.reveal-up.active {
+  animation: fadeUp 0.8s ease-out forwards;
+}
+
+/* Animación desde abajo */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Desde la izquierda */
+.fade-left {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: all 0.8s ease;
+}
+.fade-left.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Desde la derecha */
+.fade-right {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: all 0.8s ease;
+}
+.fade-right.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Aparición hacia arriba con escalonado */
+.fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+.fade-up.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Para listas (stagger) */
+.stagger > * {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+.stagger > *.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+.team-card img {
+  transition: transform 0.5s ease;
+}
+
+.team-card:hover img {
+  transform: scale(1.1);
+}
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: all 0.8s ease;
+}
+.reveal-left.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-right {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: all 0.8s ease;
+}
+.reveal-right.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+
+
+/* --- Ripple neon (gota + ondas) --- */
+[data-ripple-overlay] { contain: layout paint; }
+
+.ripple-dot {
+  position: absolute;
+  width: 12px; height: 12px;
+  border-radius: 9999px;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle at 50% 50%, #ffd6f0 0%, #ff4bd1 45%, #8b5cf6 75%, transparent 76%);
+  filter: blur(0.3px) drop-shadow(0 0 10px rgba(255, 75, 209, .7));
+  opacity: .9;
+}
+
+/* Ondas (anillos) */
+.ripple-ring {
+  position: absolute;
+  width: 10px; height: 10px;
+  border-radius: 9999px;
+  transform: translate(-50%, -50%) scale(.2);
+  border: 2px solid #ff4bd1;
+  box-shadow:
+    0 0 18px rgba(255, 75, 209, .65),
+    0 0 40px rgba(139, 92, 246, .45);
+  animation: ripple-neon 1.8s ease-out infinite;
+  opacity: .7;
+  will-change: transform, opacity;
+}
+
+/* Degradado animado en el borde con mask (suave pero liviano) */
+.ripple-ring::before {
+  content: "";
+  position: absolute; inset: -2px;
+  border-radius: inherit;
+  background: conic-gradient(from 0turn,
+    #ff4bd1, #8b5cf6, #3b82f6, #8b5cf6, #ff4bd1);
+  -webkit-mask: 
+    radial-gradient(circle, transparent calc(100% - 2px), #000 calc(100% - 1px));
+          mask: 
+    radial-gradient(circle, transparent calc(100% - 2px), #000 calc(100% - 1px));
+  filter: blur(1px);
+  opacity: .9;
+}
+
+.ripple-ring.r2 { animation-delay: .25s; opacity: .5; }
+.ripple-ring.r3 { animation-delay: .5s;  opacity: .35; }
+
+@keyframes ripple-neon {
+  0%   { transform: translate(-50%, -50%) scale(.2);  opacity: .75; }
+  70%  { opacity: .15; }
+  100% { transform: translate(-50%, -50%) scale(12); opacity: 0; }
+}
+
+
+
+/* Speaker ring base */
+.speaker-card .speaker-ring { transform: rotate(-8deg); }
+
+/* Sombra suave sobre el anillo para dar volumen */
+.speaker-card .ring-anim {
+  filter: url(#wavy) drop-shadow(0 0 12px rgba(255, 75, 209, .35))
+                   drop-shadow(0 0 30px rgba(139, 92, 246, .25));
+  transition: opacity .3s ease;
+  opacity: .9;
+}
+
+/* Efectos en hover */
+.speaker-card:hover .speaker-ring { transform: rotate(0deg); transition: transform .8s cubic-bezier(.2,.8,.2,1); }
+.speaker-card:hover .ring-anim { opacity: 1; }
+
+/* Rotación lenta del anillo (da sensación de vida) */
+@keyframes slowSpin { to { transform: rotate(360deg); } }
+.speaker-card:hover .speaker-ring { animation: slowSpin 18s linear infinite; }
+
+
+/* Orbitas de “peras” púrpura */
+.pear-orbit { pointer-events: none; }
+.pear-pack { transform-origin: 50% 50%; animation: pearSpin 26s linear infinite; }
+@keyframes pearSpin { to { transform: rotate(360deg); } }
+
+/* Al pasar el mouse sobre la tarjeta (contenedor de 256px) acelera y aumenta mezcla */
+article:hover .pear-pack { animation-duration: 10s; }
+
+/* Opcional: respiración leve aun sin hover */
+.pear-pack { animation-timing-function: linear; }
+
+
+
+
+/* Aros que giran alrededor de la foto (mismo centro) */
+.speaker-neon .ring { transform-origin: 100px 100px; }
+
+/* Velocidades y sentidos diferentes para que se crucen y se “sobrepongan” */
+@keyframes orbit { to { transform: rotate(360deg); } }
+
+.speaker-neon .ring-a { animation: orbit 28s linear infinite; opacity: .85; }
+.speaker-neon .ring-b { animation: orbit 34s linear infinite reverse; opacity: .65; }
+.speaker-neon .ring-c { animation: orbit 40s linear infinite; opacity: .50; }
+
+/* En hover: más brillo y más rápido */
+.speaker-neon:hover .ring-a { animation-duration: 10s; }
+.speaker-neon:hover .ring-b { animation-duration: 12s; }
+.speaker-neon:hover .ring-c { animation-duration: 14s; }
+
+/* Rotación continua del ribbon (comparten el mismo centro de la imagen) */
+@keyframes spinOrbit { to { transform: rotate(360deg); } }
+
+.speaker-orbit .ribbon-pack {
+  animation: spinOrbit 22s linear infinite;
+}
+
+/* Acelera y sube brillo en hover */
+.speaker-orbit:hover .ribbon-pack {
+  animation-duration: 9s;
+  filter: url(#glow-spkA) drop-shadow(0 0 12px rgba(168,85,247,.35));
+}
+
+
+/* Rotación solo en hover/focus (misma para todas las elipses) */
+@keyframes spinEllipse { to { transform: rotate(360deg); } }
+
+.speaker-ellipses .ellipses-pack { animation: none; }
+.speaker-ellipses:hover .ellipses-pack,
+.speaker-ellipses:focus-within .ellipses-pack {
+  animation: spinEllipse 3s linear infinite;
+}
+
+/* Opcional: en hover acelera un poco el brillo general (por el filtro) */
+.speaker-ellipses:hover .ellipses-pack { filter: url(#glowA) drop-shadow(0 0 18px rgba(255, 1, 1, 0.35)); }
+
+
+@keyframes spinEllipse { to { transform: rotate(360deg); } }
+
+.speaker-ellipses .ellipses-pack { animation: none; }
+.speaker-ellipses:hover .ellipses-pack,
+.speaker-ellipses:focus-within .ellipses-pack {
+  animation: spinEllipse 1s linear infinite;
+}
+
+
+
+
+@keyframes slideLeft {
+  from { opacity: 0; transform: translateX(-80px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes slideRight {
+  from { opacity: 0; transform: translateX(80px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+.animate-slide-left {
+  animation: slideLeft 0.8s ease-out forwards;
+}
+.animate-slide-right {
+  animation: slideRight 0.8s ease-out forwards;
+}
+.reveal-left, .reveal-right {
+  opacity: 0;
+  transform: translateX(0); /* base para evitar salto */
+  will-change: transform, opacity;
+}
+.reveal-left   { transform: translateX(-60px); }
+.reveal-right  { transform: translateX( 60px); }
+.in-view       { opacity: 1; transform: translateX(0); transition: transform .7s ease-out, opacity .7s ease-out; }
