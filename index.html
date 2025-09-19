@@ -12,35 +12,80 @@
 </head>
 <body class="font-sans bg-[#855de9] text-gray-800">
 
-  <!-- NAVBAR -->
-  <header class="absolute top-0 left-0 w-full flex justify-between items-center p-4 z-10">
-    <!-- Logo -->
-    <a href="index.html">
-      <img src="img/logo.png" alt="Logo" class="h-16">
-    </a>
-    
-    <!-- Menú -->
-    <nav class="hidden md:flex space-x-6 text-white font-bold">
-      <a href="index.html" class="hover:text-red-500">Inicio</a>
-      <a href="programas.html" class="hover:text-red-500">Programas</a>
-      <a href="eventos.html" class="hover:text-red-500">Eventos</a>
-      <a href="emprendimientos.html" class="hover:text-red-500">Emprendimientos</a>
-    </nav>
+ 
+ 
 
-  </header>
- <main-header></main-header>
+  <!-- NAVBAR flotante sobre la portada -->
+<header class="absolute top-0 left-0 w-full flex justify-between items-center p-10 z-50">
+  <!-- Logo -->
+  <a href="index.html">
+    <img src="img/logo.png" alt="Logo" class="h-12 md:h-24">
+  </a>
+  
+  <!-- Botón menú (solo móvil) -->
+  <button id="menu-btn" class="md:hidden text-white p-2" aria-expanded="false">
+    <!-- Icono abrir -->
+    <svg id="icon-open" xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+    </svg>
+    <!-- Icono cerrar -->
+    <svg id="icon-close" xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+    </svg>
+  </button>
 
-  <!-- PORTADA -->
-  <section class="relative h-screen flex text-center justify-center bg-black ">
-    <!-- Imagen o video de fondo -->
-    <img src="img/portada.jpg" alt="Portada" class="absolute w-full h-full object-cover opacity-70">
-    
-    <!-- Texto encima -->
-    <div class="relative z-10 text-white  ">
-      <h1 class="text-6xl font-extrabold">PAQARINA</h1>
-      <p class="text-4xl font-bold text-red-500">WASI</p>
-    </div>
-  </section>
+  <!-- Menú Desktop -->
+  <nav class="hidden md:flex items-center gap-6 text-white font-bold">
+    <a href="index.html" class="hover:text-red-500">Inicio</a>
+    <a href="programas.html" class="hover:text-red-500">Programas</a>
+    <a href="eventos.html" class="hover:text-red-500">Eventos</a>
+    <a href="emprendimientos.html" class="hover:text-red-500">Emprendimientos</a>
+  </nav>
+</header>
+
+<!-- Menú Mobile flotante -->
+<nav id="mobile-menu" class="hidden md:hidden absolute top-16 left-0 w-full bg-black/40 backdrop-blur-md text-white font-bold z-40">
+  <a href="index.html" class="block px-4 py-3 hover:bg-red-500/70">Inicio</a>
+  <a href="programas.html" class="block px-4 py-3 hover:bg-red-500/70">Programas</a>
+  <a href="eventos.html" class="block px-4 py-3 hover:bg-red-500/70">Eventos</a>
+  <a href="emprendimientos.html" class="block px-4 py-3 hover:bg-red-500/70">Emprendimientos</a>
+</nav>
+
+<!-- PORTADA -->
+<section class="relative h-screen flex flex-col   text-center bg-black">
+  <!-- Imagen de fondo -->
+  <img src="img/portada.jpg" alt="Portada" class="absolute inset-0 w-full h-full object-cover opacity-70">
+
+  <!-- Texto encima -->
+  <!-- <div class="relative z-10 text-white ">
+    <h1 class="text-2xl  md:text-7xl font-extrabold">PAQARINA</h1>
+    <p class="text-2xl md:text-5xl font-bold text-red-500">WASI</p>
+  </div> -->
+</section>
+
+<script>
+  const btn = document.getElementById('menu-btn');
+  const mobile = document.getElementById('mobile-menu');
+  const openIco = document.getElementById('icon-open');
+  const closeIco = document.getElementById('icon-close');
+
+  btn.addEventListener('click', () => {
+    mobile.classList.toggle('hidden');
+    openIco.classList.toggle('hidden');
+    closeIco.classList.toggle('hidden');
+    btn.setAttribute('aria-expanded', String(!mobile.classList.contains('hidden')));
+  });
+
+  mobile.addEventListener('click', (e) => {
+    if (e.target.tagName === 'A') {
+      mobile.classList.add('hidden');
+      openIco.classList.remove('hidden');
+      closeIco.classList.add('hidden');
+      btn.setAttribute('aria-expanded', 'false');
+    }
+  });
+</script>
+
 
   
 
