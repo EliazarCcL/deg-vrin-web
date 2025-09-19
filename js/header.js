@@ -5,7 +5,7 @@ class MainHeader extends HTMLElement {
           <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3">
             <!-- Logo -->
             <a href="index.html" class="inline-flex items-center gap-3">
-              <img src="img/logo.png" alt="Logo" class="h-20">
+              <img src="img/logo.png" alt="Logo" class="h-16">
               <span class="sr-only">Inicio</span>
             </a>
   
