@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Incubadora - Emprendimiento: my radar </title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body class="min-h-screen flex flex-col bg-[#0b0616] text-white font-sans">
+
+  <!-- FONDO NEÓN -->
+  <div aria-hidden="true" class="pointer-events-none fixed inset-0 -z-10">
+    <div class="absolute -top-24 -left-24 h-96 w-96 rounded-full bg-fuchsia-600/25 blur-3xl"></div>
+    <div class="absolute -bottom-24 -right-24 h-[32rem] w-[32rem] rounded-full bg-indigo-600/25 blur-3xl"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(1200px_500px_at_80%_10%,rgba(255,255,255,0.08),transparent)]"></div>
+    <div class="absolute inset-0 opacity-[0.045] bg-[linear-gradient(0deg,transparent_24px,rgba(255,255,255,0.06)_25px),linear-gradient(90deg,transparent_24px,rgba(255,255,255,0.06)_25px)] bg-[size:25px_25px]"></div>
+  </div>
+
+  <!-- NAVBAR (rutas ajustadas con ../) -->
+  <main-header1></main-header1>
+  
+
+  <!-- HERO / TÍTULO -->
+  <section class="mx-auto max-w-7xl px-6 pt-10">
+    <div class="grid gap-8 md:grid-cols-2">
+      <div class="space-y-5">
+        <div class="flex flex-wrap items-center gap-3">
+          <!-- etiquetas del emprendimiento => linea, año , ... -->
+          <span class="inline-flex items-center gap-2 rounded-full bg-fuchsia-600 px-3 py-1 text-sm font-semibold">
+            Digital
+          </span>
+         
+          
+        </div>
+        <!-- titulo del emprendimiento-->
+
+        <h1 class="text-4xl font-bold leading-tight md:text-5xl">My Radar</h1>
+
+        <p class="text-white/80">
+            Plataforma digital que conecta empresas locales con consumidores, ofreciendo reseñas, publicidad inteligente, compras directas y servicios como delivery, permitiendo a las empresas promocionarse y a los usuarios reservar y comprar fácilmente.
+
+
+
+
+
+        </p>
+
+        <div class="flex flex-wrap gap-3">
+          
+          <a href="#contacto" class="rounded-full bg-fuchsia-600/90 px-5 py-2 text-sm font-semibold hover:bg-fuchsia-600">
+            Contactar
+          </a>
+        </div>
+      </div>
+
+      <div class="relative overflow-hidden rounded-2xl ring-1 ring-white/10">
+        <img src="my-radar.png" alt="My Radar " class="h-96 w-full object-cover aspect-square ">
+        <!-- etiqueta flotante -->
+        <span class="absolute right-4 top-4 rounded-full bg-black/40 px-3 py-1 text-xs ring-1 ring-white/10 backdrop-blur">
+          My Radar
+        </span>
+      </div>
+    </div>
+  </section>
+
+ <!-- DETALLES -->
+<section id="detalles" class="mx-auto max-w-7xl px-6 py-12">
+    <div class="grid gap-8 md:grid-cols-2 px-2 md:px-12">
+  
+      <!-- Problema -->
+      <article class="rounded-2xl border border-white/10 bg-white/5 p-6 hover:shadow-lg hover:border-rose-400/40 transition">
+        <div class="inline-flex items-center gap-2 rounded-full bg-rose-500/10 px-3 py-1 text-sm text-rose-300">
+          <span>🚨 Problema</span>
+        </div>
+        <h3 class="mt-4 text-xl font-semibold">Falta de Conexión Efectiva entre Empresas y Consumidores</h3>
+        <p class="mt-3 text-white/80 leading-relaxed">
+          En la actualidad, muchas empresas enfrentan dificultades para destacar en un mercado saturado, 
+          especialmente en ciudades donde la competencia es alta. Por otro lado, los consumidores encuentran 
+          problemas para identificar negocios que ofrezcan productos y servicios de calidad de manera consistente.
+        </p>
+        <ul class="mt-4 space-y-2 text-white/80 list-disc list-inside">
+          <li>Desperdicio de Recursos: más del 50% de pymes reportan que su inversión en publicidad digital no genera el retorno esperado.</li>
+          <li>Desconfianza del Consumidor: el 75% de los consumidores confían más en recomendaciones personales que en anuncios pagados.</li>
+          <li>Economías Locales Fragmentadas: las empresas no logran conectar con su público objetivo, limitando su crecimiento y competitividad.</li>
+        </ul>
+       
+      </article>
+  
+      <!-- Solución -->
+      <article class="rounded-2xl border border-white/10 bg-gradient-to-tr from-indigo-500/20 to-fuchsia-600/20 p-6 hover:shadow-xl hover:border-fuchsia-400/40 transition">
+        <div class="inline-flex items-center gap-2 rounded-full bg-fuchsia-500/10 px-3 py-1 text-sm text-fuchsia-300">
+          <span>💡 Solución</span>
+        </div>
+        <h3 class="mt-4 text-xl font-semibold">MyRadar: Plataforma Integral para Empresas y Consumidores</h3>
+        <p class="mt-3 text-white/90 leading-relaxed">
+          MyRadar conecta a empresas locales con consumidores mediante reseñas verificadas, 
+          publicidad inteligente, compras directas, reservas y servicios adicionales como delivery. 
+          Todo en un solo ecosistema digital.
+        </p>
+        <ul class="mt-4 space-y-2 text-white/90">
+          <li class="flex gap-2"><span>✅</span><span>Empresas: membresía anual para promocionarse con multimedia, vender productos, aceptar reservas y conectarse a delivery local.</span></li>
+          <li class="flex gap-2"><span>✅</span><span>Consumidores: acceso gratuito para descubrir negocios confiables, leer reseñas auténticas, comprar, reservar y pedir delivery.</span></li>
+          <li class="flex gap-2"><span>✅</span><span>Diferenciador: integra reseñas, publicidad, compras, reservas y delivery en una sola plataforma (única en el mercado).</span></li>
+        </ul>
+        <div class="mt-5 flex flex-wrap gap-2">
+          <span class="rounded-full bg-white/10 px-3 py-1 text-xs text-white/70">Publicidad Inteligente</span>
+          <span class="rounded-full bg-white/10 px-3 py-1 text-xs text-white/70">Reseñas Verificadas</span>
+          <span class="rounded-full bg-white/10 px-3 py-1 text-xs text-white/70">Reservas & Delivery</span>
+          <span class="rounded-full bg-white/10 px-3 py-1 text-xs text-white/70">Ecosistema Integral</span>
+        </div>
+      </article>
+  
+    </div>
+  </section>
+  
+  
+  
+
+  <!-- EQUIPO (fotos estilo speakers con borde púrpura al hover) -->
+  <section id="equipo" class="mx-auto max-w-7xl px-6 py-12">
+    <div class="mb-10 text-center">
+      <h2 class="text-3xl font-bold">Nuestro Equipo</h2>
+      <p class="text-sm text-white/70">Fundadores & Colaboradores</p>
+    </div>
+  
+    <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 ">
+      
+      <!-- Tarjeta -->
+      <article class="rounded-lg bg-white/5 p-6 text-center shadow-md transition hover:bg-white/10">
+        <h3 class="text-lg font-semibold">Midduar Arturo Matheus Tapia</h3>
+        <p class="mt-2 text-sm text-white/60">Co-Fundador</p>
+      </article>
+  
+      <!-- Tarjeta -->
+      <article class="rounded-lg bg-white/5 p-6 text-center shadow-md transition hover:bg-white/10">
+        <h3 class="text-lg font-semibold">Daniela Condori Maxi</h3>
+        <p class="mt-2 text-sm text-white/60">Co-Fundadora</p>
+      </article>
+  
+       <!-- Tarjeta -->
+       <article class="rounded-lg bg-white/5 p-6 text-center shadow-md transition hover:bg-white/10">
+        <h3 class="text-lg font-semibold">Mitzury Maritza Monica Matheus Tapia</h3>
+        <p class="mt-2 text-sm text-white/60">Co-Fundadora</p>
+      </article>
+  
+     
+  
+    </div>
+    
+  </section>
+  
+
+
+ 
+  <script src="../../js/header2.js"></script>
+  <!-- FOOTER -->
+  <script src="../../js/footer1.js"></script>
+
+  <!-- FOOTER -->
+ <footer-app1></footer-app>
+
+</body>
+</html>

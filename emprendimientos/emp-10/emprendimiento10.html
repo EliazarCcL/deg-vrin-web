@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Incubadora - Emprendimiento: inkas garden  </title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body class="min-h-screen flex flex-col bg-[#0b0616] text-white font-sans">
+
+  <!-- FONDO NEÓN -->
+  <div aria-hidden="true" class="pointer-events-none fixed inset-0 -z-10">
+    <div class="absolute -top-24 -left-24 h-96 w-96 rounded-full bg-fuchsia-600/25 blur-3xl"></div>
+    <div class="absolute -bottom-24 -right-24 h-[32rem] w-[32rem] rounded-full bg-indigo-600/25 blur-3xl"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(1200px_500px_at_80%_10%,rgba(255,255,255,0.08),transparent)]"></div>
+    <div class="absolute inset-0 opacity-[0.045] bg-[linear-gradient(0deg,transparent_24px,rgba(255,255,255,0.06)_25px),linear-gradient(90deg,transparent_24px,rgba(255,255,255,0.06)_25px)] bg-[size:25px_25px]"></div>
+  </div>
+
+  <!-- NAVBAR (rutas ajustadas con ../) -->
+  <main-header1></main-header1>
+  
+
+  <!-- HERO / TÍTULO -->
+  <section class="mx-auto max-w-7xl px-6 pt-10">
+    <div class="grid gap-8 md:grid-cols-2">
+      <div class="space-y-5">
+        <div class="flex flex-wrap items-center gap-3">
+          <!-- etiquetas del emprendimiento => linea, año , ... -->
+          <span class="inline-flex items-center gap-2 rounded-full bg-fuchsia-600 px-3 py-1 text-sm font-semibold">
+            BeautyTech
+          </span>
+         
+          
+        </div>
+        <!-- titulo del emprendimiento-->
+
+        <h1 class="text-4xl font-bold leading-tight md:text-5xl">Inkas Garden</h1>
+
+        <span class="inline-flex items-center gap-2 rounded-full bg-emerald-500/10 px-3 py-1 text-sm text-emerald-700 dark:text-emerald-300">
+          BeautyTech • Clean Beauty • Bioeconomía andina
+        </span>
+        <h2 class="mt-4 text-3xl md:text-4xl font-bold tracking-tight">
+          ¿Qué es nuestra dermocosmética natural?
+        </h2>
+        <p class="mt-3 text-neutral-700 dark:text-neutral-300">
+          Transformamos <strong>plantas nativas</strong> —como el <em>Arrayán (Luma chequen)</em>— en cuidado de la piel eficaz y responsable.
+          Formulamos con <strong>aceites esenciales</strong> y fitoactivos estandarizados para hidratar, fortalecer la barrera cutánea
+          y ayudar a prevenir fotoenvejecimiento e hiperpigmentación.
+        </p>
+
+
+
+
+
+
+        </p>
+
+        <div class="flex flex-wrap gap-3">
+          
+          <a href="#contacto" class="rounded-full bg-fuchsia-600/90 px-5 py-2 text-sm font-semibold hover:bg-fuchsia-600">
+            Contactar
+          </a>
+        </div>
+      </div>
+
+      <div class="relative overflow-hidden rounded-2xl ring-1 ring-white/10">
+        <img src="inkas-garden.png" alt="plak " class="h-96 w-full object-cover aspect-square ">
+        <!-- etiqueta flotante -->
+        <span class="absolute right-4 top-4 rounded-full bg-black/40 px-3 py-1 text-xs ring-1 ring-white/10 backdrop-blur">
+          BeautyTech
+        </span>
+        
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- Grid: Problema / Solución / Modelo -->
+  <!-- DERMOCOSMÉTICA NATURAL: Problema / Solución / Modelo de negocio -->
+
+  <header class="mx-auto max-w-3xl text-center">
+    <span class="inline-flex items-center gap-2 rounded-full bg-emerald-500/10 px-3 py-1 text-sm text-emerald-700 dark:text-emerald-300">
+      🌿 Bioeconomía & Dermocosmética natural
+    </span>
+    <h2 class="mt-4 text-3xl md:text-4xl font-bold tracking-tight">
+      Aceites esenciales con plantas nativas para salud de la piel
+    </h2>
+    <p class="mt-3 text-neutral-700 dark:text-neutral-300">
+      Formulaciones con fitoingredientes del territorio (p. ej. <em>Luma chequen</em> “Arrayán”) que cuidan y regeneran la piel y promueven bienestar físico y mental.
+    </p>
+  </header>
+
+  <!-- Grid: Problema / Solución / Modelo -->
+  <div class="mt-10 grid gap-8 md:grid-cols-3">
+
+    <!-- PROBLEMA -->
+    <article class="rounded-2xl border border-neutral-200/70 dark:border-white/10 bg-white/60 dark:bg-white/5 backdrop-blur p-6 hover:shadow-lg transition">
+      <div class="inline-flex items-center gap-2 rounded-full bg-rose-500/10 px-3 py-1 text-sm text-rose-700 dark:text-rose-300">
+        🚨 Problema
+      </div>
+      <h3 class="mt-4 text-xl font-semibold">Deterioro prematuro de la piel</h3>
+      <p class="mt-3 text-neutral-700 dark:text-neutral-300 leading-relaxed">
+        Estrés oxidativo y factores climáticos aceleran la pérdida de humedad y elasticidad, disminuyen el colágeno y provocan hiperpigmentación.
+        Entre el <strong>30% y 40% de la población peruana</strong> presenta algún trastorno dermatológico (fuente declarada: Instituto Nacional de Salud).
+      </p>
+      <ul class="mt-5 space-y-2 list-disc list-inside text-neutral-700 dark:text-neutral-300">
+        <li>Sequedad, flacidez y líneas de expresión tempranas.</li>
+        <li>Manchas e hiperpigmentación postinflamatoria.</li>
+        <li>Exposición solar, frío/altura y contaminación.</li>
+        <li>Rutinas con químicos agresivos o poco efectivas.</li>
+      </ul>
+    </article>
+
+    <!-- SOLUCIÓN -->
+    <article class="relative overflow-hidden rounded-2xl border border-fuchsia-400/30 bg-gradient-to-tr from-indigo-600/10 via-fuchsia-600/10 to-rose-600/10 p-6 hover:shadow-xl transition">
+      <div class="inline-flex items-center gap-2 rounded-full bg-fuchsia-500/10 px-3 py-1 text-sm text-fuchsia-800 dark:text-fuchsia-300">
+        💡 Solución
+      </div>
+      <h3 class="mt-4 text-xl font-semibold">Dermocosmética de origen natural</h3>
+      <p class="mt-3 text-neutral-800 dark:text-neutral-200 leading-relaxed">
+        Elaboramos productos dermocosméticos con <strong>aceites esenciales</strong> y extractos de plantas nativas,
+        optimizando el rendimiento de sus <strong>fitoingredientes</strong> (p. ej., antioxidantes del Arrayán) para hidratar, reparar y
+        proteger la piel, aportando además beneficios de aromaterapia y bienestar mental.
+      </p>
+      <div class="mt-6 grid gap-3 sm:grid-cols-2">
+        <div class="rounded-xl bg-white/60 dark:bg-white/5 p-4 border border-white/10">
+          <div class="text-sm font-semibold">🧪 Ciencia + naturaleza</div>
+          <p class="text-sm mt-1 text-neutral-700 dark:text-neutral-300">Estandarización de activos, control de calidad y estabilidad.</p>
+        </div>
+        <div class="rounded-xl bg-white/60 dark:bg-white/5 p-4 border border-white/10">
+          <div class="text-sm font-semibold">🌸 Aromaterapia funcional</div>
+          <p class="text-sm mt-1 text-neutral-700 dark:text-neutral-300">Apoya relajación, mejor sueño y reducción de estrés.</p>
+        </div>
+        <div class="rounded-xl bg-white/60 dark:bg-white/5 p-4 border border-white/10">
+          <div class="text-sm font-semibold">🛡️ Antioxidante & antipolución</div>
+          <p class="text-sm mt-1 text-neutral-700 dark:text-neutral-300">Previene fotoenvejecimiento y refuerza barrera cutánea.</p>
+        </div>
+        <div class="rounded-xl bg-white/60 dark:bg-white/5 p-4 border border-white/10">
+          <div class="text-sm font-semibold">🌿 Origen responsable</div>
+          <p class="text-sm mt-1 text-neutral-700 dark:text-neutral-300">Aprovechamiento sostenible de plantas nativas y comercio justo.</p>
+        </div>
+      </div>
+      <!-- Decoración -->
+      <div class="pointer-events-none absolute -right-10 -top-10 h-40 w-40 rounded-full bg-fuchsia-500/20 blur-2xl"></div>
+    </article>
+
+    <!-- MODELO DE NEGOCIO -->
+    <article class="rounded-2xl border border-emerald-400/30 bg-white/60 dark:bg-white/5 p-6 hover:shadow-lg transition">
+      <div class="inline-flex items-center gap-2 rounded-full bg-emerald-500/10 px-3 py-1 text-sm text-emerald-800 dark:text-emerald-300">
+        💸 Modelo de negocio
+      </div>
+      <h3 class="mt-4 text-xl font-semibold">B2C con portafolio dermocosmético</h3>
+      <ul class="mt-3 space-y-2 text-neutral-700 dark:text-neutral-300">
+        <li><strong>Ingresos:</strong> venta de cremas, pomadas, sérums, tónicos faciales y bálsamos 100% naturales, sin compuestos químicos agresivos.</li>
+        <li><strong>Beneficio:</strong> cuidado y regeneración de la piel; prevención de envejecimiento prematuro.</li>
+        <li><strong>Mercado objetivo:</strong> clases B y C; jóvenes y adultos conscientes de su salud y del medio ambiente.</li>
+        <li><strong>Estrategia:</strong> diversificación de líneas (hidratación, antimanchas, antiedad, calmante), ampliando base de clientes.</li>
+        <li><strong>Canales:</strong> e-commerce, marketplaces, retail boutique, dermocosméticas/tiendas naturistas y suscripción.</li>
+      </ul>
+      <div class="mt-5 flex flex-wrap gap-2">
+        <span class="rounded-full bg-white/60 dark:bg-white/5 px-3 py-1 text-xs">Aceites esenciales</span>
+        <span class="rounded-full bg-white/60 dark:bg-white/5 px-3 py-1 text-xs">Plantas nativas</span>
+        <span class="rounded-full bg-white/60 dark:bg-white/5 px-3 py-1 text-xs">Antioxidante</span>
+        <span class="rounded-full bg-white/60 dark:bg-white/5 px-3 py-1 text-xs">Aromaterapia</span>
+        <span class="rounded-full bg-white/60 dark:bg-white/5 px-3 py-1 text-xs">Cruelty-free</span>
+      </div>
+    </article>
+
+  </div>
+
+
+</section>
+
+
+
+
+  
+  
+
+  <!-- EQUIPO (fotos estilo speakers con borde púrpura al hover) -->
+  <section id="equipo" class="mx-auto max-w-7xl px-6 py-12">
+    <div class="mb-10 text-center">
+      <h2 class="text-3xl font-bold">Nuestro Equipo</h2>
+      <p class="text-sm text-white/70">Fundadores & Colaboradores</p>
+    </div>
+  
+    <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 ">
+      
+      <!-- Tarjeta -->
+      <article class="rounded-lg bg-white/5 p-6 text-center shadow-md transition hover:bg-white/10">
+        <h3 class="text-lg font-semibold">ARQUIMEDES VALDEZ</h3>
+        <p class="mt-2 text-sm text-white/60">Co-Fundador</p>
+      </article>
+  
+      <!-- Tarjeta -->
+      <article class="rounded-lg bg-white/5 p-6 text-center shadow-md transition hover:bg-white/10">
+        <h3 class="text-lg font-semibold"> VALERIA VALDEZ</h3>
+        <p class="mt-2 text-sm text-white/60">Co-Fundadora</p>
+      </article>
+    
+      
+        <!-- Tarjeta -->
+        <article class="rounded-lg bg-white/5 p-6 text-center shadow-md transition hover:bg-white/10">
+          <h3 class="text-lg font-semibold">YAQUELIN JIMENEZ</h3>
+          <p class="mt-2 text-sm text-white/60">Co-Fundadora</p>
+
+      
+    </div>
+    
+  </section>
+  
+
+
+ 
+  <script src="../../js/header2.js"></script>
+  <script src="../../js/footer1.js"></script>
+
+  <!-- FOOTER -->
+ <footer-app1></footer-app>
+
+</body>
+</html>
+w

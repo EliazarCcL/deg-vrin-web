@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Incubadora - Emprendimiento: inka bot </title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body class="min-h-screen flex flex-col bg-[#0b0616] text-white font-sans">
+
+  <!-- FONDO NEÓN -->
+  <div aria-hidden="true" class="pointer-events-none fixed inset-0 -z-10">
+    <div class="absolute -top-24 -left-24 h-96 w-96 rounded-full bg-fuchsia-600/25 blur-3xl"></div>
+    <div class="absolute -bottom-24 -right-24 h-[32rem] w-[32rem] rounded-full bg-indigo-600/25 blur-3xl"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(1200px_500px_at_80%_10%,rgba(255,255,255,0.08),transparent)]"></div>
+    <div class="absolute inset-0 opacity-[0.045] bg-[linear-gradient(0deg,transparent_24px,rgba(255,255,255,0.06)_25px),linear-gradient(90deg,transparent_24px,rgba(255,255,255,0.06)_25px)] bg-[size:25px_25px]"></div>
+  </div>
+
+  <!-- NAVBAR (rutas ajustadas con ../) -->
+  <main-header1></main-header1>
+  
+
+  <!-- HERO / TÍTULO -->
+  <section class="mx-auto max-w-7xl px-6 pt-10">
+    <div class="grid gap-8 md:grid-cols-2">
+      <div class="space-y-5">
+        <div class="flex flex-wrap items-center gap-3">
+          <!-- etiquetas del emprendimiento => linea, año , ... -->
+          <span class="inline-flex items-center gap-2 rounded-full bg-fuchsia-600 px-3 py-1 text-sm font-semibold">
+            Digital
+          </span>
+         
+          
+        </div>
+        <!-- titulo del emprendimiento-->
+
+        <h1 class="text-4xl font-bold leading-tight md:text-5xl">Inka Bot</h1>
+
+        Robot de optimización de mermas de frutas y verduras a la medida de la demanda de los clientes
+      </p>
+
+
+
+
+
+
+        </p>
+
+        <div class="flex flex-wrap gap-3">
+          
+          <a href="#contacto" class="rounded-full bg-fuchsia-600/90 px-5 py-2 text-sm font-semibold hover:bg-fuchsia-600">
+            Contactar
+          </a>
+        </div>
+      </div>
+
+      <div class="relative overflow-hidden rounded-2xl ring-1 ring-white/10">
+        <img src="inka-bot.png" alt="plak " class="h-96 w-full object-cover aspect-square ">
+        <!-- etiqueta flotante -->
+        <span class="absolute right-4 top-4 rounded-full bg-black/40 px-3 py-1 text-xs ring-1 ring-white/10 backdrop-blur text-green-400">
+          Digital
+        </span>
+        
+        <span class="absolute left-4 bottom-4 rounded-full bg-black/40 px-3 py-1 text-xs ring-1 ring-red/10 backdrop-blur text-red-400">
+          INKA BOT 
+        
+      </div>
+    </div>
+  </section>
+
+ <!-- ARTESANÍA ANDINA: Problema / Solución / Modelo de negocio -->
+<section id="andino" class="mx-auto max-w-7xl px-6 py-16">
+  <header class="mx-auto max-w-3xl text-center">
+    <span class="inline-flex items-center gap-2 rounded-full bg-rose-500/10 px-3 py-1 text-sm text-rose-700 dark:text-rose-300">
+      🧵 Upcycling & Cultura
+    </span>
+    <h2 class="mt-4 text-3xl md:text-4xl font-bold tracking-tight">
+      Rescate textil andino y piezas con historia
+    </h2>
+    <p class="mt-3 text-neutral-700 dark:text-neutral-300">
+      Damos una segunda vida a ponchos, mantas y trajes tradicionales, evitando el descarte y preservando identidad cultural.
+    </p>
+  </header>
+
+  <!-- Grid: Problema / Solución / Modelo -->
+  <div class="mt-10 grid gap-8 md:grid-cols-3">
+
+    <!-- PROBLEMA -->
+    <article class="rounded-2xl border border-neutral-200/70 dark:border-white/10 bg-white/60 dark:bg-white/5 backdrop-blur p-6 hover:shadow-lg transition">
+      <div class="inline-flex items-center gap-2 rounded-full bg-rose-500/10 px-3 py-1 text-sm text-rose-700 dark:text-rose-300">
+        🚨 Problema
+      </div>
+      <h3 class="mt-4 text-xl font-semibold">Descarte y pérdida cultural</h3>
+      <p class="mt-3 text-neutral-700 dark:text-neutral-300 leading-relaxed">
+        Muchas prendas andinas con defectos se desechan, perdiendo trabajo artesanal, historia y tradiciones. 
+        La demanda turística cayó tras la pandemia y paros, y la recuperación es lenta. 
+        Vender solo en puestos propios limita la escala y la estabilidad del empleo.
+      </p>
+      <ul class="mt-5 space-y-2 list-disc list-inside text-neutral-700 dark:text-neutral-300">
+        <li>Desperdicio textil y huella ambiental.</li>
+        <li>Menor flujo de turistas y pedidos.</li>
+        <li>Producción pequeña, empleo inestable.</li>
+        <li>Baja visibilidad de marca.</li>
+      </ul>
+    </article>
+
+    <!-- SOLUCIÓN -->
+    <article class="relative overflow-hidden rounded-2xl border border-fuchsia-400/30 bg-gradient-to-tr from-indigo-600/10 via-fuchsia-600/10 to-rose-600/10 p-6 hover:shadow-xl transition">
+      <div class="inline-flex items-center gap-2 rounded-full bg-fuchsia-500/10 px-3 py-1 text-sm text-fuchsia-800 dark:text-fuchsia-300">
+        💡 Solución
+      </div>
+      <h3 class="mt-4 text-xl font-semibold">Recuperación y upcycling con valor cultural</h3>
+      <p class="mt-3 text-neutral-800 dark:text-neutral-200 leading-relaxed">
+        Rescatamos prendas tradicionales, las reparamos, higienizamos y rediseñamos para darles un <strong>segundo uso</strong>. 
+        Cada pieza es única, con narrativa de origen, ideal para turistas y público consciente. 
+        Al vender más, podemos aumentar producción y generar empleo local estable.
+      </p>
+      <div class="mt-6 grid gap-3 sm:grid-cols-2">
+        <div class="rounded-xl bg-white/60 dark:bg-white/5 p-4 border border-white/10">
+          <div class="text-sm font-semibold">🪡 Rescate & restauración</div>
+          <p class="text-sm mt-1 text-neutral-700 dark:text-neutral-300">Reparación, limpieza y acabado profesional.</p>
+        </div>
+        <div class="rounded-xl bg-white/60 dark:bg-white/5 p-4 border border-white/10">
+          <div class="text-sm font-semibold">🎨 Rediseño responsable</div>
+          <p class="text-sm mt-1 text-neutral-700 dark:text-neutral-300">Ediciones limitadas con identidad andina.</p>
+        </div>
+        <div class="rounded-xl bg-white/60 dark:bg-white/5 p-4 border border-white/10">
+          <div class="text-sm font-semibold">📜 Historia de cada pieza</div>
+          <p class="text-sm mt-1 text-neutral-700 dark:text-neutral-300">Ficha de origen, técnicas y simbología.</p>
+        </div>
+        <div class="rounded-xl bg-white/60 dark:bg-white/5 p-4 border border-white/10">
+          <div class="text-sm font-semibold">🤝 Empleo local</div>
+          <p class="text-sm mt-1 text-neutral-700 dark:text-neutral-300">Talleres comunitarios y trabajo digno.</p>
+        </div>
+      </div>
+      <!-- Decoración -->
+      <div class="pointer-events-none absolute -right-10 -top-10 h-40 w-40 rounded-full bg-fuchsia-500/20 blur-2xl"></div>
+    </article>
+
+    <!-- MODELO DE NEGOCIO -->
+    <article class="rounded-2xl border border-emerald-400/30 bg-white/60 dark:bg-white/5 p-6 hover:shadow-lg transition">
+      <div class="inline-flex items-center gap-2 rounded-full bg-emerald-500/10 px-3 py-1 text-sm text-emerald-800 dark:text-emerald-300">
+        💸 Modelo de negocio
+      </div>
+      <h3 class="mt-4 text-xl font-semibold">B2C artesanal con potencial omnicanal</h3>
+      <ul class="mt-3 space-y-2 text-neutral-700 dark:text-neutral-300">
+        <li><strong>Ingresos:</strong> venta directa a turistas en puestos y ferias; margen por <em>valor agregado</em> (restauración/diseño).</li>
+        <li><strong>Canales a crecer:</strong> tienda online, marketplaces y retail boutique (consignación o mayorista).</li>
+        <li><strong>Portafolio:</strong> colecciones cápsula, piezas únicas y encargos personalizados.</li>
+        <li><strong>Costos clave:</strong> insumos recuperados, mano de obra artesanal, logística y marketing.</li>
+      </ul>
+      <div class="mt-5 flex flex-wrap gap-2">
+        <span class="rounded-full bg-white/60 dark:bg-white/5 px-3 py-1 text-xs">Hecho a mano</span>
+        <span class="rounded-full bg-white/60 dark:bg-white/5 px-3 py-1 text-xs">Edición limitada</span>
+        <span class="rounded-full bg-white/60 dark:bg-white/5 px-3 py-1 text-xs">Sustentable</span>
+      </div>
+    </article>
+
+  </div>
+
+  
+</section>
+
+
+
+  
+  
+
+  <!-- EQUIPO (fotos estilo speakers con borde púrpura al hover) -->
+  <section id="equipo" class="mx-auto max-w-7xl px-6 py-12">
+    <div class="mb-10 text-center">
+      <h2 class="text-3xl font-bold">Nuestro Equipo</h2>
+      <p class="text-sm text-white/70">Fundadores & Colaboradores</p>
+    </div>
+  
+    <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 ">
+      
+      <!-- Tarjeta -->
+      <article class="rounded-lg bg-white/5 p-6 text-center shadow-md transition hover:bg-white/10">
+        <h3 class="text-lg font-semibold">MODESTA PARISACA SUPO</h3>
+        <p class="mt-2 text-sm text-white/60">Co-Fundadora</p>
+      </article>
+  
+      <!-- Tarjeta -->
+      <article class="rounded-lg bg-white/5 p-6 text-center shadow-md transition hover:bg-white/10">
+        <h3 class="text-lg font-semibold">Wilmet Lusi Sonco Apaza</h3>
+        <p class="mt-2 text-sm text-white/60">Co-Fundador</p>
+      </article>
+      
+       <!-- Tarjeta -->
+       <article class="rounded-lg bg-white/5 p-6 text-center shadow-md transition hover:bg-white/10">
+        <h3 class="text-lg font-semibold">Paulino Farfán Leon</h3>
+        <p class="mt-2 text-sm text-white/60">Co-Fundador</p>
+      </article>
+  
+    </div>
+    
+  </section>
+  
+
+
+ 
+  <script src="../../js/header2.js"></script>
+  <!-- FOOTER -->
+  <script src="../../js/footer1.js"></script>
+
+  <!-- FOOTER -->
+ <footer-app1></footer-app>
+
+</body>
+</html>

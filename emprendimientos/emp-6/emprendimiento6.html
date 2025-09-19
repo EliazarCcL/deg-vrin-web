@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Incubadora - Emprendimiento: plak </title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body class="min-h-screen flex flex-col bg-[#0b0616] text-white font-sans">
+
+  <!-- FONDO NEÓN -->
+  <div aria-hidden="true" class="pointer-events-none fixed inset-0 -z-10">
+    <div class="absolute -top-24 -left-24 h-96 w-96 rounded-full bg-fuchsia-600/25 blur-3xl"></div>
+    <div class="absolute -bottom-24 -right-24 h-[32rem] w-[32rem] rounded-full bg-indigo-600/25 blur-3xl"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(1200px_500px_at_80%_10%,rgba(255,255,255,0.08),transparent)]"></div>
+    <div class="absolute inset-0 opacity-[0.045] bg-[linear-gradient(0deg,transparent_24px,rgba(255,255,255,0.06)_25px),linear-gradient(90deg,transparent_24px,rgba(255,255,255,0.06)_25px)] bg-[size:25px_25px]"></div>
+  </div>
+
+  <!-- NAVBAR (rutas ajustadas con ../) -->
+  <main-header1></main-header1>
+  
+
+  <!-- HERO / TÍTULO -->
+  <section class="mx-auto max-w-7xl px-6 pt-10">
+    <div class="grid gap-8 md:grid-cols-2">
+      <div class="space-y-5">
+        <div class="flex flex-wrap items-center gap-3">
+          <!-- etiquetas del emprendimiento => linea, año , ... -->
+          <span class="inline-flex items-center gap-2 rounded-full bg-fuchsia-600 px-3 py-1 text-sm font-semibold">
+            Digital
+          </span>
+         
+          
+        </div>
+        <!-- titulo del emprendimiento-->
+
+        <h1 class="text-4xl font-bold leading-tight md:text-5xl">Plak</h1>
+
+        <p class="text-white/80">
+          Plak es una Digital Experience Platform para la nube con arquitectura ARM en Latinoamérica. Permite crear servidores en AWS, Hetzner, DigitalOcean y Vultr, y administrar sitios y apps PHP desde una única consola con scripting DevOps, staging, SSL, backups y monitoreo. Reduce la curva de aprendizaje multi-cloud, acelera el time-to-deploy y baja costos aprovechando ARM. Planes desde USD 36/mes y opciones a medida para empresas
+
+
+
+
+
+
+        </p>
+
+        <div class="flex flex-wrap gap-3">
+          
+          <a href="#contacto" class="rounded-full bg-fuchsia-600/90 px-5 py-2 text-sm font-semibold hover:bg-fuchsia-600">
+            Contactar
+          </a>
+        </div>
+      </div>
+
+      <div class="relative overflow-hidden rounded-2xl ring-1 ring-white/10">
+        <img src="plak.png" alt="plak " class="h-96 w-full object-cover aspect-square ">
+        <!-- etiqueta flotante -->
+        <span class="absolute right-4 top-4 rounded-full bg-black/40 px-3 py-1 text-xs ring-1 ring-white/10 backdrop-blur">
+          Digital
+        </span>
+        <img src="logo-plak.png" alt="Logo de Plak" class="absolute bottom-4 left-4 h-16 w-auto opacity-80" />
+      </div>
+    </div>
+  </section>
+
+ <!-- PLAK: Problema, Solución (DXP ARM) y Modelo de Negocio -->
+<section id="plak" class="mx-auto max-w-7xl px-6 py-16">
+  <!-- Encabezado -->
+  <header class="mx-auto max-w-3xl text-center">
+    
+    <h2 class="mt-4 text-3xl md:text-4xl font-bold tracking-tight">
+      Despliegue ARM y sitios PHP en minutos con <span class="text-sky-700 dark:text-sky-300">Plak</span>
+    </h2>
+    <p class="mt-3 text-neutral-700 dark:text-neutral-300">
+      Para ~<strong>46 mil</strong> emprendedores en Perú y <strong>35 millones</strong> en el mundo, lanzar apps en la nube —especialmente en servidores <strong>ARM</strong>— sigue siendo complejo. Plak lo simplifica.
+    </p>
+  </header>
+
+  <!-- Grid principal -->
+  <div class="mt-10 grid gap-8 md:grid-cols-3">
+    <!-- PROBLEMA -->
+    <article class="rounded-2xl border border-neutral-200/70 dark:border-white/10 bg-white/60 dark:bg-white/5 backdrop-blur p-6 hover:shadow-lg transition">
+      <div class="inline-flex items-center gap-2 rounded-full bg-rose-500/10 px-3 py-1 text-sm text-rose-700 dark:text-rose-300">
+        🚨 Problema
+      </div>
+      <h3 class="mt-4 text-xl font-semibold">Complejidad para desplegar en ARM</h3>
+      <p class="mt-3 text-neutral-700 dark:text-neutral-300 leading-relaxed">
+        Desplegar servidores <strong>ARM</strong> y publicar aplicaciones <strong>PHP</strong> requiere configurar imágenes,
+        redes, seguridad, pipelines y compatibilidad. El resultado: más tiempo, más errores y mayores costos de operación.
+      </p>
+      <ul class="mt-5 space-y-2 list-disc list-inside text-neutral-700 dark:text-neutral-300">
+        <li>Curva de aprendizaje alta en IaaS multi-proveedor.</li>
+        <li>Scripts DevOps dispersos y difícil estandarización.</li>
+        <li>Mantenimiento y escalado poco predecibles.</li>
+      </ul>
+      <div class="mt-6 flex flex-wrap gap-2">
+        <span class="rounded-full bg-white/70 dark:bg-white/10 px-3 py-1 text-xs text-neutral-700 dark:text-neutral-300">ARM</span>
+        <span class="rounded-full bg-white/70 dark:bg-white/10 px-3 py-1 text-xs text-neutral-700 dark:text-neutral-300">PHP</span>
+        <span class="rounded-full bg-white/70 dark:bg-white/10 px-3 py-1 text-xs text-neutral-700 dark:text-neutral-300">DevOps</span>
+        <span class="rounded-full bg-white/70 dark:bg-white/10 px-3 py-1 text-xs text-neutral-700 dark:text-neutral-300">Multi-cloud</span>
+      </div>
+    </article>
+
+    <!-- SOLUCIÓN -->
+    <article class="relative overflow-hidden rounded-2xl border border-sky-400/30 bg-gradient-to-tr from-indigo-600/10 via-sky-600/10 to-emerald-600/10 p-6 hover:shadow-xl transition">
+      <div class="inline-flex items-center gap-2 rounded-full bg-sky-500/10 px-3 py-1 text-sm text-sky-800 dark:text-sky-300">
+        💡 Solución — Plak DXP (Digital Experience Platform)
+      </div>
+      <h3 class="mt-4 text-xl font-semibold">DXP que simplifica la nube ARM</h3>
+      <p class="mt-3 text-neutral-800 dark:text-neutral-200 leading-relaxed">
+        <strong>Plak</strong> permite desplegar servidores ARM en distintos proveedores
+        (<span class="font-medium">AWS, Hetzner, DigitalOcean, Vultr</span>, etc.) y administrar sitios web y apps PHP desde
+        una única plataforma (<span class="font-medium">cloud.plak.io</span>) con <em>scripting DevOps integrado</em>.
+      </p>
+
+      <!-- Chips de proveedores -->
+      <div class="mt-5 flex flex-wrap gap-2">
+        <span class="rounded-lg border border-white/20 bg-white/60 dark:bg-white/5 px-3 py-1 text-xs">AWS</span>
+        <span class="rounded-lg border border-white/20 bg-white/60 dark:bg-white/5 px-3 py-1 text-xs">Hetzner</span>
+        <span class="rounded-lg border border-white/20 bg-white/60 dark:bg-white/5 px-3 py-1 text-xs">DigitalOcean</span>
+        <span class="rounded-lg border border-white/20 bg-white/60 dark:bg-white/5 px-3 py-1 text-xs">Vultr</span>
+      </div>
+
+      <!-- Features -->
+      <div class="mt-6 grid gap-4 sm:grid-cols-2">
+        <div class="rounded-xl bg-white/60 dark:bg-white/5 p-4 border border-white/10">
+          <div class="text-lg font-semibold">⚡ Deploy 1-click ARM</div>
+          <p class="text-sm mt-1 text-neutral-700 dark:text-neutral-300">Instancias optimizadas, imágenes y seguridad listas.</p>
+        </div>
+        <div class="rounded-xl bg-white/60 dark:bg-white/5 p-4 border border-white/10">
+          <div class="text-lg font-semibold">🐘 Gestor de sitios PHP</div>
+          <p class="text-sm mt-1 text-neutral-700 dark:text-neutral-300">Dominios, SSL, versiones, backups y staging.</p>
+        </div>
+        <div class="rounded-xl bg-white/60 dark:bg-white/5 p-4 border border-white/10">
+          <div class="text-lg font-semibold">🧩 DevOps scripting</div>
+          <p class="text-sm mt-1 text-neutral-700 dark:text-neutral-300">Pipelines reproducibles y plantillas de infra.</p>
+        </div>
+        <div class="rounded-xl bg-white/60 dark:bg-white/5 p-4 border border-white/10">
+          <div class="text-lg font-semibold">📈 Observabilidad</div>
+          <p class="text-sm mt-1 text-neutral-700 dark:text-neutral-300">Monitoreo, alertas y métricas de performance.</p>
+        </div>
+      </div>
+
+      
+
+      <!-- Decoración -->
+      <div class="pointer-events-none absolute -right-10 -top-10 h-40 w-40 rounded-full bg-sky-500/20 blur-2xl"></div>
+    </article>
+
+    <!-- MODELO DE NEGOCIO -->
+    <article class="rounded-2xl border border-emerald-400/30 bg-white/60 dark:bg-white/5 p-6 hover:shadow-lg transition">
+      <div class="inline-flex items-center gap-2 rounded-full bg-emerald-500/10 px-3 py-1 text-sm text-emerald-700 dark:text-emerald-300">
+        💸 Modelo de negocio
+      </div>
+      <h3 class="mt-4 text-xl font-semibold">Suscripción desde <span class="text-emerald-700 dark:text-emerald-300">$36/mes</span></h3>
+      <ul class="mt-3 space-y-2 text-neutral-700 dark:text-neutral-300">
+        <li>Planes escalables + opciones a medida para empresas.</li>
+        <li>Estrategia: penetración en Perú → expansión LATAM.</li>
+        <li>Barrera: estandarización basada en cPanel.</li>
+        <li>Acción: programa de comunicación sobre limitaciones actuales y ventajas de ARM con Plak.</li>
+      </ul>
+
+      <div class="mt-5 grid gap-3">
+        <div class="rounded-lg border border-white/10 p-4 bg-emerald-500/5">
+          <div class="text-sm font-semibold">Go-to-market</div>
+          <p class="text-sm mt-1 text-neutral-700 dark:text-neutral-300">
+            Contenido técnico, guías de migración desde cPanel, demos en vivo y casos de ahorro/performancia en ARM.
+          </p>
+        </div>
+        <div class="rounded-lg border border-white/10 p-4 bg-emerald-500/5">
+          <div class="text-sm font-semibold">Upsell</div>
+          <p class="text-sm mt-1 text-neutral-700 dark:text-neutral-300">
+            Add-ons DevOps, soporte 24/7, backups avanzados y auditoría de performance.
+          </p>
+        </div>
+      </div>
+    </article>
+  </div>
+
+  <!-- Franja de beneficios -->
+  <div id="precios" class="mt-12 grid gap-6 sm:grid-cols-3">
+    <div class="rounded-xl border border-white/10 bg-white/60 dark:bg-white/5 p-5 text-center">
+      <div class="text-2xl font-bold">↓ Costos</div>
+      <p class="text-sm mt-1 text-neutral-700 dark:text-neutral-300">Aprovecha ARM para mejor precio/rendimiento.</p>
+    </div>
+    <div class="rounded-xl border border-white/10 bg-white/60 dark:bg-white/5 p-5 text-center">
+      <div class="text-2xl font-bold">↑ Velocidad</div>
+      <p class="text-sm mt-1 text-neutral-700 dark:text-neutral-300">Deploy y escalado reproducibles.</p>
+    </div>
+    <div class="rounded-xl border border-white/10 bg-white/60 dark:bg-white/5 p-5 text-center">
+      <div class="text-2xl font-bold">🧰 Menos fricción</div>
+      <p class="text-sm mt-1 text-neutral-700 dark:text-neutral-300">Todo desde una sola consola.</p>
+    </div>
+  </div>
+</section>
+
+
+  
+  
+
+  <!-- EQUIPO (fotos estilo speakers con borde púrpura al hover) -->
+  <section id="equipo" class="mx-auto max-w-7xl px-6 py-12">
+    <div class="mb-10 text-center">
+      <h2 class="text-3xl font-bold">Nuestro Equipo</h2>
+      <p class="text-sm text-white/70">Fundadores & Colaboradores</p>
+    </div>
+  
+    <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 ">
+      
+      <!-- Tarjeta -->
+      <article class="rounded-lg bg-white/5 p-6 text-center shadow-md transition hover:bg-white/10">
+        <h3 class="text-lg font-semibold">Oscar Hugo Paz</h3>
+        <p class="mt-2 text-sm text-white/60">Co-Fundador</p>
+      </article>
+  
+      <!-- Tarjeta -->
+      <article class="rounded-lg bg-white/5 p-6 text-center shadow-md transition hover:bg-white/10">
+        <h3 class="text-lg font-semibold">Anel Campos</h3>
+        <p class="mt-2 text-sm text-white/60">Co-Fundadora</p>
+      </article>
+      
+       <!-- Tarjeta -->
+      
+  
+    </div>
+    
+  </section>
+  
+
+
+ 
+  <script src="../../js/header2.js"></script>
+  <!-- FOOTER -->
+  <script src="../../js/footer1.js"></script>
+
+  <!-- FOOTER -->
+ <footer-app1></footer-app>
+</body>
+</html>
